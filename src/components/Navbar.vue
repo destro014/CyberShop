@@ -42,7 +42,10 @@
           <div class="row">
             <div class="col-6 collapse-brand">
               <router-link :to="{ name: 'home' }">
-                <img alt="image" src="../assets/img/logo/SVG/Logo-icon-only.svg" />
+                <img
+                  alt="image"
+                  src="../assets/img/logo/SVG/Logo-icon-only.svg"
+                />
               </router-link>
             </div>
             <div class="col-6 collapse-close">
@@ -68,10 +71,16 @@
               <span class="nav-link-inner--text">Categories</span>
             </a>
             <div class="dropdown-menu">
-              <a href="./examples/landing.html" class="dropdown-item">Landing</a>
-              <a href="./examples/profile.html" class="dropdown-item">Profile</a>
+              <a href="./examples/landing.html" class="dropdown-item"
+                >Landing</a
+              >
+              <a href="./examples/profile.html" class="dropdown-item"
+                >Profile</a
+              >
               <a href="./examples/login.html" class="dropdown-item">Login</a>
-              <a href="./examples/register.html" class="dropdown-item">Register</a>
+              <a href="./examples/register.html" class="dropdown-item"
+                >Register</a
+              >
             </div>
           </li>
         </ul>
@@ -89,19 +98,29 @@
         </div>
         <ul class="navbar-nav align-items-lg-center ml-lg-auto">
           <li class="nav-item">
-            <router-link :to="{ name: 'home' }" class="nav-link">Home</router-link>
+            <router-link :to="{ name: 'home' }" class="nav-link"
+              >Home</router-link
+            >
           </li>
           <li class="nav-item">
-            <router-link :to="{ name: 'about' }" class="nav-link">About</router-link>
+            <router-link :to="{ name: 'about' }" class="nav-link"
+              >About</router-link
+            >
           </li>
           <li class="nav-item">
-            <router-link :to="{ name: 'help' }" class="nav-link">Help</router-link>
+            <router-link :to="{ name: 'help' }" class="nav-link"
+              >Help</router-link
+            >
           </li>
           <li class="nav-item">
-            <router-link :to="{ name: 'register' }" class="nav-link">Register</router-link>
+            <router-link :to="{ name: 'register' }" class="nav-link"
+              >Register</router-link
+            >
           </li>
           <li class="nav-item">
-            <router-link :to="{ name: 'login' }" class="nav-link">Login</router-link>
+            <router-link :to="{ name: 'login' }" class="nav-link"
+              >Login</router-link
+            >
           </li>
         </ul>
       </div>

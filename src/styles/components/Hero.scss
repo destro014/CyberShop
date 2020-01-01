@@ -28,9 +28,6 @@
     width: 100%;
     height: auto;
     background: #f5f5f5;
-    position: relative;
-    z-index: 5;
-    display: flex;
 
     img {
       position: absolute;
@@ -53,4 +50,45 @@
       }
     }
   }
+}
+
+.vueperslides--fixed-height {
+  height: 386px;
+}
+
+.vueperslides__bullet .default {
+  background-color: rgba(0, 0, 0, 0.3);
+  border: none;
+  box-shadow: none;
+  transition: 0.3s;
+  width: 10px;
+  height: 10px;
+}
+
+.vueperslides__bullets button {
+  background: none !important;
+  cursor: auto !important;
+
+  &:focus {
+    outline: none !important;
+  }
+}
+
+.vueperslides__bullet--active .default {
+  background-color: $primary;
+  width: 25px;
+
+}
+
+.vueperslides__bullet span {
+  display: block;
+  color: #fff;
+  font-size: 10px;
+  opacity: 0.8;
+}
+
+.vueperslides--touchable .vueperslides__track {
+
+  cursor: -webkit-auto;
+  cursor: auto;
 }

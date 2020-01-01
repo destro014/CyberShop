@@ -1,9 +1,7 @@
 <template>
   <div class="home">
-    <Navbar />
-    <Hero />
-
-    <Products productTypes="Recently listed" />
+    <Products :type="type1" />
+    <Products :type="type2" />
   </div>
 </template>
 
@@ -17,9 +15,14 @@ export default {
     Hero,
     Navbar,
     Products
+  },
+  data() {
+    return {
+      type1: "Recently listed",
+      type2: "Electronics"
+    };
   }
 };
 </script>
 
-<style lang="scss" scoped>
-</style>
+<style lang="scss" scoped></style>

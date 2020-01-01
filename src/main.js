@@ -18,13 +18,8 @@ library.add(faPlug, faSearch, faList);
 Vue.component("font-awesome-icon", FontAwesomeIcon);
 
 import "bootstrap";
-import Headroom from "headroom.js";
 
 window.$ = window.jQuery = require("jquery");
-
-
-
-
 
 import("../src/scripts/argon.js");
 

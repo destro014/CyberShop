@@ -1,26 +1,22 @@
 <template>
   <div class="products">
-    <h1>products</h1>
-    {{ categories }}
+    <h1>{{ type }} products</h1>
   </div>
 </template>
 
 <script>
+import { VueperSlides, VueperSlide } from "vueperslides";
+import "vueperslides/dist/vueperslides.css";
 export default {
   name: "Products",
+  components: { VueperSlides, VueperSlide },
+  props: ["type"],
   data() {
     return {
-      categories: null
-      //   productTypes: "Recently listed"
+      type: this.type
     };
   }
 };
-
-import axios from "axios";
-
-// axios.get("http://cybershop.pe.hu/api/categories").then(response => {
-//   this.categories = response.title;
-// });
 </script>
 
 <style></style>

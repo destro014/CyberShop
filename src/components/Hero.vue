@@ -17,31 +17,59 @@
       </ul>
     </div>
     <div class="promo-carousel">
-      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-        </ol>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img class="d-block w-100" src="../assets/img/promo/1.png" alt="First slide" />
-          </div>
-          <div class="carousel-item">
-            <img class="d-block w-100" src="../assets/img/promo/1.png" alt="Second slide" />
-          </div>
-          <div class="carousel-item">
-            <img class="d-block w-100" src="../assets/img/promo/1.png" alt="Third slide" />
-          </div>
-        </div>
-      </div>
+      <vueper-slides :arrows="false" fixed-height="true">
+        <vueper-slide
+          v-for="(slide, i) in slides"
+          :key="i"
+          :title="slide.title"
+          :content="slide.content"
+          :image="'src/assets/img/promo/' + slide.image"
+          :style="'background-color: ' + ['#ff5252', '#42b983'][i % 2]"
+          :dragging-distance="70"
+          prevent-y-scroll
+        />
+      </vueper-slides>
     </div>
   </div>
 </template>
 
 <script>
+import { VueperSlides, VueperSlide } from "vueperslides";
+import "vueperslides/dist/vueperslides.css";
 export default {
-  name: "Hero"
+  name: "Hero",
+  components: { VueperSlides, VueperSlide },
+  data() {
+    return {
+      slides: [
+        {
+          title: "Slide #1",
+          content: "Slide content.",
+          image: "1.png"
+        },
+        {
+          title: "Slide #2",
+          content: "Slide content.",
+          image: "1.png"
+        },
+        {
+          title: "Slide #2",
+          content: "Slide content.",
+          image: "1.png"
+        },
+        {
+          title: "Slide #2",
+          content: "Slide content.",
+          image: "1.png"
+        },
+        {
+          title: "Slide #2",
+          content: "Slide content.",
+          image: "1.png"
+        }
+      ]
+    };
+  }
 };
 </script>
 

@@ -1,11 +1,25 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
+    <Navbar />
+    <Hero />
+
+    <Products productTypes="Recently listed" />
   </div>
 </template>
 
 <script>
+import Hero from "@/components/Hero.vue";
+import Navbar from "@/components/Navbar.vue";
+import Products from "@/components/Products.vue";
 export default {
-  name: "home"
+  name: "home",
+  components: {
+    Hero,
+    Navbar,
+    Products
+  }
 };
 </script>
+
+<style lang="scss" scoped>
+</style>

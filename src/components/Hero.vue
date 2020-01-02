@@ -17,55 +17,42 @@
       </ul>
     </div>
     <div class="promo-carousel">
-      <vueper-slides :arrows="false" fixed-height="true">
-        <vueper-slide
-          v-for="(slide, i) in slides"
-          :key="i"
-          :title="slide.title"
-          :content="slide.content"
-          :image="'src/assets/img/promo/' + slide.image"
-          :style="'background-color: ' + ['#ff5252', '#42b983'][i % 2]"
-          :dragging-distance="70"
-          prevent-y-scroll
-        />
-      </vueper-slides>
+      <PromoCarousel />
     </div>
   </div>
 </template>
 
 <script>
-import { VueperSlides, VueperSlide } from "vueperslides";
+import PromoCarousel from "@/components/PromoCarousel.vue";
 import "vueperslides/dist/vueperslides.css";
 export default {
   name: "Hero",
-  components: { VueperSlides, VueperSlide },
+  components: { PromoCarousel },
   data() {
     return {
+      pauseOnHover: true,
+      autoPlaying: true,
+      internalAutoPlaying: true,
       slides: [
         {
           title: "Slide #1",
           content: "Slide content.",
-          image: "1.png"
+          image: require("../assets/img/promo/1.png")
         },
         {
           title: "Slide #2",
           content: "Slide content.",
-          image: "1.png"
+          image: require("../assets/img/promo/1.png")
         },
         {
-          title: "Slide #2",
+          title: "Slide #3",
           content: "Slide content.",
-          image: "1.png"
+          image: require("../assets/img/promo/1.png")
         },
         {
-          title: "Slide #2",
+          title: "Slide #4",
           content: "Slide content.",
-          image: "1.png"
-        },
-        {
-          title: "Slide #2",
-          content: "Slide content.",
-          image: "1.png"
+          image: require("../assets/img/promo/1.png")
         }
       ]
     };

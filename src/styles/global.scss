@@ -3,3 +3,15 @@
 @import 'partials/typography';
 @import 'partials/functions';
 @import 'argon/argon.scss';
+
+.shifted {
+    padding-top: 85px;
+}
+
+@media (max-width: 991px) {
+    .shifted {
+        padding-top: 128px;
+
+    }
+
+}

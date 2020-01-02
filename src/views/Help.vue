@@ -1,5 +1,5 @@
 <template>
-  <div class="help">
+  <div class="help shifted">
     <h1>Help</h1>
   </div>
 </template>

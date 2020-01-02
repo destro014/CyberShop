@@ -1,5 +1,5 @@
 <template>
-  <div class="register">
+  <div class="register shifted">
     <h1>Register</h1>
   </div>
 </template>

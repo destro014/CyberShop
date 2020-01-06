@@ -15,8 +15,8 @@ export default {
 };
 </script>
 
-<style>
-router-view {
-  padding-top: 86px;
+<style lang="scss">
+#app {
+  background: #eee;
 }
 </style>

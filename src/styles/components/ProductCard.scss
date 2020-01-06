@@ -1,0 +1,24 @@
+.card {
+    overflow: hidden;
+    margin-top: 16px;
+
+    .card-body {
+        padding: 0;
+
+        .product-details {
+            padding: 20px;
+        }
+    }
+
+    img {
+        width: 100%;
+    }
+
+    .btn {
+        width: 100%;
+    }
+}
+
+.card-lift--hover:hover {
+    transform: translateY(-5px) !important;
+}

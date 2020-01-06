@@ -35,20 +35,14 @@ export default {
           image: require("../assets/img/promo/1.png")
         },
         {
-          title: "Slide #2",
-          content: "Slide content.",
           image: require("../assets/img/promo/1.png"),
           link: "about"
         },
         {
-          title: "Slide #3",
-          content: "Slide content.",
           image: require("../assets/img/promo/1.png"),
           link: "register"
         },
         {
-          title: "Slide #4",
-          content: "Slide content.",
           image: require("../assets/img/promo/1.png"),
           link: "login"
         }

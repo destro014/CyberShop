@@ -1,19 +1,23 @@
 <template>
   <div class="products container-fluid">
-    <h5>{{ type }} products {{typeid}}</h5>
+    <div class="title">
+      <h5>{{ type }} products {{typeid}}</h5>
+      <a href="#">View more</a>
+    </div>
     <div class="row">
-      <div class="col-lg-3" v-for="(product, i) in products" :key="i">{{product.title}}</div>
+      <div class="col-lg-3" v-for="(product, i) in products" :key="i">
+        <ProductCard :product="product" />
+      </div>
     </div>
   </div>
 </template>
 
 <script>
-import { VueperSlides, VueperSlide } from "vueperslides";
-import "vueperslides/dist/vueperslides.css";
 import axios from "axios";
+import ProductCard from "@/components/ProductCard.vue";
 export default {
   name: "Products",
-  components: { VueperSlides, VueperSlide },
+  components: { ProductCard },
   props: ["type", "typeid", "data"],
   data() {
     return {
@@ -23,11 +27,12 @@ export default {
   mounted() {
     axios.get(this.data).then(response => {
       this.products = response.data;
+      this.products = this.products.slice(0, 4);
     });
   }
 };
 </script>
 
-<style>
+<style lang="scss">
 @import "../styles/components/Products.scss";
 </style>

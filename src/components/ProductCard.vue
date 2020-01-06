@@ -11,13 +11,25 @@
       </div>
       <div class="product-details">
         <h6 class="text-uppercase">{{ product.title }}</h6>
-        <p class="description mt-3"></p>
         <div>
-          <span class="badge badge-pill badge-success">Brand New</span>
-          <span class="badge badge-pill badge-info">used</span>
-          <span class="badge badge-pill badge-danger">not working</span>
+          <span
+            class="badge badge-pill badge-success"
+            v-if="product.usability == 0"
+            >Brand New</span
+          >
+          <span
+            class="badge badge-pill badge-info"
+            v-if="product.usability == 1"
+            >used</span
+          >
+          <span
+            class="badge badge-pill badge-danger"
+            v-if="product.usability == 2"
+            >not working</span
+          >
         </div>
-        <a href="#" class="btn btn-outline-success mt-4">View Info</a>
+        <div class="price-tag">Nrs. {{ product.price }}</div>
+        <a href="#" class="btn btn-outline-success">View Info</a>
       </div>
     </div>
   </div>

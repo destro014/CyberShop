@@ -3,6 +3,8 @@
     "title": "AC3 Phone",
     "brand": "ACME",
     "type": "phone",
+    "usability": "2",
+
     "price": 200,
     "rating": 3.8,
     "warranty_years": 1,
@@ -12,6 +14,8 @@
     "title": "AC7 Phone",
     "brand": "ACME",
     "type": "phone",
+    "usability": "0",
+
     "price": 320,
     "rating": 4,
     "warranty_years": 1,
@@ -22,6 +26,8 @@
     },
     "title": "AC3 Series Charger",
     "type": ["accessory", "charger"],
+    "usability": "1",
+
     "price": 19,
     "rating": 2.8,
     "warranty_years": 0.25,
@@ -33,6 +39,8 @@
     "title": "AC3 Case Green",
     "type": ["accessory", "case"],
     "color": "green",
+    "usability": "0",
+
     "price": 12,
     "rating": 1,
     "warranty_years": 0

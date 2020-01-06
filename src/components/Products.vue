@@ -1,11 +1,15 @@
 <template>
   <div class="products container-fluid">
     <div class="title">
-      <h5>{{ type }} products {{typeid}}</h5>
+      <h5>{{ type }} products {{ typeid }}</h5>
       <a href="#">View more</a>
     </div>
     <div class="row">
-      <div class="col-lg-3" v-for="(product, i) in products" :key="i">
+      <div
+        class="col-lg-3 col-md-4 col-sm-6 col-xs-12"
+        v-for="(product, i) in products"
+        :key="i"
+      >
         <ProductCard :product="product" />
       </div>
     </div>

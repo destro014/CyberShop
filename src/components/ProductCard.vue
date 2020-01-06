@@ -29,7 +29,7 @@
           >
         </div>
         <div class="price-tag">Nrs. {{ product.price }}</div>
-        <a href="#" class="btn btn-outline-success">View Info</a>
+        <a href="#" class="btn btn-outline-primary">View Info</a>
       </div>
     </div>
   </div>

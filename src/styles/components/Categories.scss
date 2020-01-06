@@ -12,6 +12,10 @@
         text-align: center;
         color: $text-tertary;
 
+        &:hover {
+            color: $primary;
+        }
+
         .icon {
             margin-bottom: 16px;
             height: 4rem;

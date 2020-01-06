@@ -8,15 +8,26 @@
     min-width: 200px;
 
     ul {
-      padding: 8px 16px;
+      padding: 8px 0px;
       margin-bottom: 0;
 
       li {
-        padding: 8px 0;
+        padding: 8px 16px;
         display: flex;
 
-        .icon {
-          font-size: 14px;
+        &:hover {
+          background-color: $primary;
+
+          a {
+            color: white;
+          }
+        }
+
+        a {
+          color: $text-tertary;
+
+
+
         }
       }
     }

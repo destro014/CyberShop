@@ -3,17 +3,35 @@
     <div class="categories-bar">
       <ul>
         <li>
-          <div class="category">Electronic devices</div>
+          <router-link :to="{name: 'about'}">Electronic devices</router-link>
         </li>
-        <li>Electronic Accesories</li>
-        <li>Arts and Crafts</li>
-        <li>Home and Lifestyle</li>
-        <li>Sports and Outdoor</li>
-        <li>Babies and toys</li>
-        <li>Health and Beauty</li>
-        <li>Clothes and fashion</li>
-        <li>Automobiles and vehicles</li>
-        <li>Automobiles and vehicles</li>
+        <li>
+          <router-link :to="{name: 'about'}">Electronic Accesories</router-link>
+        </li>
+        <li>
+          <router-link :to="{name: 'about'}">Arts and Crafts</router-link>
+        </li>
+        <li>
+          <router-link :to="{name: 'about'}">Home and Lifestyle</router-link>
+        </li>
+        <li>
+          <router-link :to="{name: 'about'}">Sports and Outdoor</router-link>
+        </li>
+        <li>
+          <router-link :to="{name: 'about'}">Babies and toys</router-link>
+        </li>
+        <li>
+          <router-link :to="{name: 'about'}">Health and Beauty</router-link>
+        </li>
+        <li>
+          <router-link :to="{name: 'about'}">Clothes and fashion</router-link>
+        </li>
+        <li>
+          <router-link :to="{name: 'about'}">Automobiles and vehicles</router-link>
+        </li>
+        <li>
+          <router-link :to="{name: 'about'}">Automobiles and vehicles</router-link>
+        </li>
       </ul>
     </div>
     <div class="promo-carousel">

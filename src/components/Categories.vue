@@ -3,66 +3,15 @@
     <div class="container-fluid">
       <h5>Categories</h5>
       <div class="row">
-        <div class="col-lg-2">
-          <div class="card shadow--hover border-0">
-            <div class="icon">
-              <font-awesome-icon :icon="['fas', 'plug']" />
+        <div class="col-lg-2" v-for="(category, i) in categories" :key="i">
+          <router-link :to="{name : 'about'}">
+            <div class="card shadow--hover border-0">
+              <div class="icon">
+                <font-awesome-icon :icon="['fas',category.icon ]" />
+              </div>
+              <div class="category">{{category.name}}</div>
             </div>
-            <div class="category">
-              Electronics Device
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-2">
-          <div class="card shadow--hover border-0">
-            <div class="icon">
-              <font-awesome-icon :icon="['fas', 'futbol']" size="6x" />
-            </div>
-            <div class="category">
-              Sports and Outdoor
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-2">
-          <div class="card shadow--hover border-0">
-            <div class="icon">
-              <!-- <font-awesome-icon :icon="['fas', 'baby', '5x']" /> -->
-              <font-awesome-icon icon="baby" size="xs" />
-            </div>
-            <div class="category">
-              Babies and Toys
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-2">
-          <div class="card shadow--hover border-0">
-            <div class="icon">
-              <font-awesome-icon :icon="['fas', 'car']" />
-            </div>
-            <div class="category">
-              Automobile and Vehicles
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-2">
-          <div class="card shadow--hover border-0">
-            <div class="icon">
-              <font-awesome-icon :icon="['fas', 'tshirt']" />
-            </div>
-            <div class="category">
-              Clothes and Lifestyle
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-2">
-          <div class="card shadow--hover border-0">
-            <div class="icon">
-              <font-awesome-icon :icon="['fas', 'arrow-circle-right']" />
-            </div>
-            <div class="category">
-              View All
-            </div>
-          </div>
+          </router-link>
         </div>
       </div>
     </div>
@@ -71,7 +20,19 @@
 
 <script>
 export default {
-  name: "Categories"
+  name: "Categories",
+  data() {
+    return {
+      categories: [
+        { name: "Electronics Device", icon: "plug" },
+        { name: "Sports and Outdoor", icon: "futbol" },
+        { name: "Babies and Toys", icon: "baby" },
+        { name: "Automobile and Vehicles", icon: "car" },
+        { name: "Clothes and Lifestyle", icon: "tshirt" },
+        { name: "View all", icon: "arrow-circle-right" }
+      ]
+    };
+  }
 };
 </script>
 

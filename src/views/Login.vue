@@ -42,9 +42,9 @@
               </a>
             </div>
             <div class="col-6 text-right">
-              <a href="#" class="text-light">
+              <router-link :to="{name :'register'}">
                 <small>Create new account</small>
-              </a>
+              </router-link>
             </div>
           </div>
         </div>

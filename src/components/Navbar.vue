@@ -42,10 +42,7 @@
           <div class="row">
             <div class="col-6 collapse-brand">
               <router-link :to="{ name: 'home' }">
-                <img
-                  alt="image"
-                  src="../assets/img/logo/SVG/Logo-icon-only.svg"
-                />
+                <img alt="image" src="../assets/img/logo/SVG/Logo-icon-only.svg" />
               </router-link>
             </div>
             <div class="col-6 collapse-close">
@@ -71,16 +68,9 @@
               <span class="nav-link-inner--text">Categories</span>
             </a>
             <div class="dropdown-menu">
-              <a href="./examples/landing.html" class="dropdown-item"
-                >Landing</a
-              >
-              <a href="./examples/profile.html" class="dropdown-item"
-                >Profile</a
-              >
-              <a href="./examples/login.html" class="dropdown-item">Login</a>
-              <a href="./examples/register.html" class="dropdown-item"
-                >Register</a
-              >
+              <div v-for="(category,index) in categories" :key="index">
+                <router-link :to="{name: category.link}" class="dropdown-item">{{category.name}}</router-link>
+              </div>
             </div>
           </li>
         </ul>
@@ -98,29 +88,19 @@
         </div>
         <ul class="navbar-nav align-items-lg-center ml-lg-auto">
           <li class="nav-item">
-            <router-link :to="{ name: 'home' }" class="nav-link"
-              >Home</router-link
-            >
+            <router-link :to="{ name: 'home' }" class="nav-link">Home</router-link>
           </li>
           <li class="nav-item">
-            <router-link :to="{ name: 'about' }" class="nav-link"
-              >About</router-link
-            >
+            <router-link :to="{ name: 'about' }" class="nav-link">About</router-link>
           </li>
           <li class="nav-item">
-            <router-link :to="{ name: 'help' }" class="nav-link"
-              >Help</router-link
-            >
+            <router-link :to="{ name: 'help' }" class="nav-link">Help</router-link>
           </li>
           <li class="nav-item">
-            <router-link :to="{ name: 'register' }" class="nav-link"
-              >Register</router-link
-            >
+            <router-link :to="{ name: 'register' }" class="nav-link">Register</router-link>
           </li>
           <li class="nav-item">
-            <router-link :to="{ name: 'login' }" class="nav-link"
-              >Login</router-link
-            >
+            <router-link :to="{ name: 'login' }" class="nav-link">Login</router-link>
           </li>
         </ul>
       </div>
@@ -141,8 +121,20 @@
 </template>
 
 <script>
+import axios from "axios";
 export default {
-  name: "Navbar"
+  name: "Navbar",
+  data() {
+    return {
+      categories: null
+    };
+  },
+  beforeMount() {
+    axios.get("categories.json").then(response => {
+      this.categories = response.data;
+      this.categories = this.categories.slice(0, 10);
+    });
+  }
 };
 </script>
 

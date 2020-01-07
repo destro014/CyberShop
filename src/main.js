@@ -14,14 +14,16 @@ import {
   faFutbol,
   faBaby,
   faCar,
-  faTshirt
+  faTshirt,
+  faEnvelope,
+  faLock
 } from "@fortawesome/free-solid-svg-icons";
 import {
   FontAwesomeIcon,
   FontAwesomeLayers,
   FontAwesomeLayersText
 } from "@fortawesome/vue-fontawesome";
-library.add(faPlug, faSearch, faList, faArrowCircleRight, faFutbol, faBaby, faCar, faTshirt);
+library.add(faPlug, faSearch, faList, faArrowCircleRight, faFutbol, faBaby, faCar, faTshirt, faLock, faEnvelope);
 Vue.component("font-awesome-icon", FontAwesomeIcon);
 Vue.component('font-awesome-layers', FontAwesomeLayers)
 Vue.component('font-awesome-layers-text', FontAwesomeLayersText)

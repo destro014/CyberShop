@@ -50,9 +50,16 @@
               <span class="nav-link-inner--text">Categories</span>
             </a>
             <div class="dropdown-menu">
-              <div v-for="(category,index) in categories" :key="index">
-                <router-link :to="{name: category.link}" class="dropdown-item">{{category.name}}</router-link>
-              </div>
+              <router-link
+                v-for="(category,index) in categories"
+                :key="index"
+                :to="{name: category.link}"
+                class="dropdown-item"
+              >{{category.name}}</router-link>
+              <router-link :to="{name: 'categories'}" class="dropdown-item">
+                View All
+                <font-awesome-icon :icon="['fas', 'chevron-right']" />
+              </router-link>
             </div>
           </li>
         </ul>

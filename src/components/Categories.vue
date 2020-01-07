@@ -4,14 +4,7 @@
       <h5>Categories</h5>
       <div class="row">
         <div class="col-lg-2" v-for="(category, i) in categories" :key="i">
-          <router-link :to="{name : 'about'}">
-            <div class="card shadow--hover border-0">
-              <div class="icon">
-                <font-awesome-icon :icon="['fas',category.icon ]" />
-              </div>
-              <div class="category">{{category.name}}</div>
-            </div>
-          </router-link>
+          <CategoryCard :category="category" />
         </div>
       </div>
     </div>
@@ -19,8 +12,12 @@
 </template>
 
 <script>
+import CategoryCard from "@/components/CategoryCard.vue";
 export default {
   name: "Categories",
+  components: {
+    CategoryCard
+  },
   data() {
     return {
       categories: [

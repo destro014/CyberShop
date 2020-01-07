@@ -2,36 +2,45 @@
   <div class="hero container-fluid">
     <div class="categories-bar">
       <ul>
-        <li>
-          <router-link :to="{name: 'about'}">Electronic devices</router-link>
-        </li>
-        <li>
-          <router-link :to="{name: 'about'}">Electronic Accesories</router-link>
-        </li>
-        <li>
-          <router-link :to="{name: 'about'}">Arts and Crafts</router-link>
-        </li>
-        <li>
-          <router-link :to="{name: 'about'}">Home and Lifestyle</router-link>
-        </li>
-        <li>
-          <router-link :to="{name: 'about'}">Sports and Outdoor</router-link>
-        </li>
-        <li>
-          <router-link :to="{name: 'about'}">Babies and toys</router-link>
-        </li>
-        <li>
-          <router-link :to="{name: 'about'}">Health and Beauty</router-link>
-        </li>
-        <li>
-          <router-link :to="{name: 'about'}">Clothes and fashion</router-link>
-        </li>
-        <li>
-          <router-link :to="{name: 'about'}">Automobiles and vehicles</router-link>
-        </li>
-        <li>
-          <router-link :to="{name: 'about'}">Automobiles and vehicles</router-link>
-        </li>
+        <router-link :to="{name: 'about'}">
+          <li>Electronic devices</li>
+        </router-link>
+
+        <router-link :to="{name: 'about'}">
+          <li>Electronic Accesories</li>
+        </router-link>
+
+        <router-link :to="{name: 'about'}">
+          <li>Arts and Crafts</li>
+        </router-link>
+
+        <router-link :to="{name: 'about'}">
+          <li>Home and Lifestyle</li>
+        </router-link>
+
+        <router-link :to="{name: 'about'}">
+          <li>Sports and Outdoor</li>
+        </router-link>
+
+        <router-link :to="{name: 'about'}">
+          <li>Babies and toys</li>
+        </router-link>
+
+        <router-link :to="{name: 'about'}">
+          <li>Health and Beauty</li>
+        </router-link>
+
+        <router-link :to="{name: 'about'}">
+          <li>Clothes and fashion</li>
+        </router-link>
+
+        <router-link :to="{name: 'about'}">
+          <li>Automobiles and vehicles</li>
+        </router-link>
+
+        <router-link :to="{name: 'about'}">
+          <li>Automobiles and vehicles</li>
+        </router-link>
       </ul>
     </div>
     <div class="promo-carousel">

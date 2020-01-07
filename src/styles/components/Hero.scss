@@ -11,24 +11,16 @@
       padding: 8px 0px;
       margin-bottom: 0;
 
-      li {
+      a {
         padding: 8px 16px;
         display: flex;
+        color: $text-tertary;
 
         &:hover {
           background-color: $primary;
-
-          a {
-            color: white;
-          }
+          color: white;
         }
 
-        a {
-          color: $text-tertary;
-
-
-
-        }
       }
     }
 

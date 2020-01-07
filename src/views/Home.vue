@@ -3,7 +3,7 @@
     <hero />
     <Products :type="type1" :typeid="typeid1" :data="url1" />
     <Products :type="type2" :typeid="typeid2" :data="url2" />
-    <Categories />
+    <Categories :type="categoryType" />
   </div>
 </template>
 
@@ -27,7 +27,8 @@ export default {
       url1: "/recent.json",
       url2: "/electronics.json",
       type2: "Electronics",
-      typeid2: 2
+      typeid2: 2,
+      categoryType: 0
     };
   }
 };

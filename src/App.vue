@@ -15,7 +15,14 @@ export default {
   components: {
     Navbar,
     Footer
-  }
+  },    
+  watch: {
+      '$route' (to, from) {
+        document.title = to.meta.title || 'Your Website'
+      }
+    },
+
+
 };
 </script>
 

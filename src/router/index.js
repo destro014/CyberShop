@@ -10,7 +10,10 @@ const routes = [{
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () =>
-      import( /* webpackChunkName: "about" */ "../views/Home.vue")
+      import( /* webpackChunkName: "about" */ "../views/Home.vue"),
+    meta: {
+      title: 'CyberShop | Place to buy and sell'
+    }
   },
   {
     path: "/about",
@@ -19,7 +22,10 @@ const routes = [{
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () =>
-      import( /* webpackChunkName: "about" */ "../views/About.vue")
+      import( /* webpackChunkName: "about" */ "../views/About.vue"),
+    meta: {
+      title: 'Cybershop | About'
+    }
   },
   {
     path: "/help",
@@ -28,7 +34,10 @@ const routes = [{
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () =>
-      import( /* webpackChunkName: "about" */ "../views/Help.vue")
+      import( /* webpackChunkName: "about" */ "../views/Help.vue"),
+    meta: {
+      title: 'Cybershop | Help'
+    }
   },
   {
     path: "/register",
@@ -37,7 +46,10 @@ const routes = [{
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () =>
-      import( /* webpackChunkName: "about" */ "../views/Register.vue")
+      import( /* webpackChunkName: "about" */ "../views/Register.vue"),
+    meta: {
+      title: 'Cybershop | Register'
+    }
   },
   {
     path: "/login",
@@ -46,7 +58,10 @@ const routes = [{
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () =>
-      import( /* webpackChunkName: "about" */ "../views/Login.vue")
+      import( /* webpackChunkName: "about" */ "../views/Login.vue"),
+    meta: {
+      title: 'Cybershop | Login'
+    }
   },
   {
     path: "/categories",
@@ -55,7 +70,10 @@ const routes = [{
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () =>
-      import( /* webpackChunkName: "about" */ "../views/AllCategories.vue")
+      import( /* webpackChunkName: "about" */ "../views/AllCategories.vue"),
+    meta: {
+      title: 'Cybershop | All Categories'
+    }
   }
 ];
 

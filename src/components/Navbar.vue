@@ -1,22 +1,4 @@
 <template>
-  <!-- <div class="main-nav">
-      <div class="brand">
-        <img src="../assets/img/logo/SVG/Logo-icon-only.svg" alt />
-      </div>
-      <div class="search">
-        <input type="text" placeholder="Search anything" />
-      </div>
-      <div class="menu">
-        <ul>
-          <li>Home</li>
-          <li>Login</li>
-          <li>Register</li>
-          <li>About</li>
-          <li>Help</li>
-        </ul>
-      </div>
-  </div>-->
-
   <nav
     id="navbar-main"
     class="navbar navbar-main navbar-expand-lg navbar-light navbar-transparent bg-primary headroom"

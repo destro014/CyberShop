@@ -11,18 +11,16 @@
         <h6>Useful Link</h6>
         <ul>
           <li>
-            <router-link :to="{ name: '/help' }">About CyberShop</router-link>
+            <router-link :to="{ name: 'help' }">About CyberShop</router-link>
           </li>
           <li>
-            <router-link :to="{ name: '/help' }">Customer Support</router-link>
+            <router-link :to="{ name: 'help' }">Customer Support</router-link>
           </li>
           <li>
-            <router-link :to="{ name: '/help' }">FAQs</router-link>
+            <router-link :to="{ name: 'help' }">FAQs</router-link>
           </li>
           <li>
-            <router-link :to="{ name: '/help' }"
-              >Sell on Cyber Shop</router-link
-            >
+            <router-link :to="{ name: 'help' }">Sell on Cyber Shop</router-link>
           </li>
         </ul>
       </div>
@@ -46,9 +44,7 @@
             <a href="#" class="nav-link" target="_blank">Privacy Policy</a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link" target="_blank"
-              >Terms &amp; Conditions</a
-            >
+            <a href="#" class="nav-link" target="_blank">Terms &amp; Conditions</a>
           </li>
           <li class="nav-item">
             <a href="#" class="nav-link" target="_blank">Blog</a>

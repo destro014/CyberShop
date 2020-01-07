@@ -1,6 +1,6 @@
 <template>
   <div class="category-card">
-    <router-link :to="{name : 'about'}">
+    <router-link :to="{name : category.link}">
       <div class="card shadow--hover border-0">
         <div class="icon">
           <font-awesome-icon :icon="['fas',category.icon ]" />

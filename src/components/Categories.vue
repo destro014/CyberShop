@@ -6,6 +6,11 @@
         <div class="col-lg-2" v-for="(category, i) in categories" :key="i">
           <CategoryCard :category="category" />
         </div>
+        <div class="col-lg-2" v-if="type == 0">
+          <CategoryCard
+            :category="{name: 'View All', icon: 'arrow-circle-right', link: 'categories'}"
+          />
+        </div>
       </div>
     </div>
   </div>
@@ -13,22 +18,25 @@
 
 <script>
 import CategoryCard from "@/components/CategoryCard.vue";
+import axios from "axios";
 export default {
   name: "Categories",
+  props: ["type"],
   components: {
     CategoryCard
   },
   data() {
     return {
-      categories: [
-        { name: "Electronics Device", icon: "plug" },
-        { name: "Sports and Outdoor", icon: "futbol" },
-        { name: "Babies and Toys", icon: "baby" },
-        { name: "Automobile and Vehicles", icon: "car" },
-        { name: "Clothes and Lifestyle", icon: "tshirt" },
-        { name: "View all", icon: "arrow-circle-right" }
-      ]
+      categories: null
     };
+  },
+  beforeMount() {
+    axios.get("categories.json").then(response => {
+      this.categories = response.data;
+      if (this.type == 0) {
+        this.categories = this.categories.slice(0, 5);
+      }
+    });
   }
 };
 </script>

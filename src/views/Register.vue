@@ -166,9 +166,11 @@ export default {
       } else {
         this.validName = false;
       }
+      this.validForm();
     },
     checkEmail() {
       this.validEmail = this.reg.test(this.email);
+      this.validForm();
     },
     reveal() {
       this.passwordTyping = true;
@@ -203,6 +205,9 @@ export default {
       } else {
         this.validPassword = false;
       }
+      this.validForm();
+    },
+    validForm() {
       if (
         this.validPassword == true &&
         this.validName == true &&

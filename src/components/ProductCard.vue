@@ -2,7 +2,7 @@
   <div class="card card-lift--hover shadow-lg--hover border-0">
     <div class="card-body">
       <div class="product-image">
-        <progressive-img src="1.png" :placeholder="this.image" :blur="0" />
+        <progressive-img :src="product.image" :placeholder="this.image" :blur="0" />
       </div>
       <div class="product-details">
         <h6 class="text-uppercase">{{ product.title }}</h6>
@@ -12,7 +12,6 @@
           <span class="badge badge-pill badge-danger" v-if="product.usability == 2">not working</span>
         </div>
         <div class="price-tag">Nrs. {{ product.price }}</div>
-        <a href="#" class="btn btn-outline-primary">View Info</a>
       </div>
     </div>
   </div>

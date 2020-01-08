@@ -18,15 +18,20 @@ import ProductCard from "@/components/ProductCard.vue";
 export default {
   name: "Products",
   components: { ProductCard },
-  props: ["type", "typeid", "data"],
+  props: ["type", "typeid", "url"],
   data() {
     return {
       products: null
     };
   },
-  mounted() {
-    axios.get(this.data).then(response => {
+  created() {
+    axios.get(this.url).then(response => {
       this.products = response.data;
+      if (this.typeid == 1) {
+        this.products = this.products.sort(
+          (a, b) => new Date(b.date) - new Date(a.date)
+        );
+      }
       this.products = this.products.slice(0, 4);
     });
   }

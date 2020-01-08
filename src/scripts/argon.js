@@ -18,24 +18,24 @@
 
 import Headroom from "headroom.js";
 ("use strict");
-$(document).ready(function() {
+$(document).ready(function () {
   // Collapse navigation
-  $(".navbar-main .collapse").on("hide.bs.collapse", function() {
+  $(".navbar-main .collapse").on("hide.bs.collapse", function () {
     var $this = $(this);
     $this.addClass("collapsing-out");
   });
 
-  $(".navbar-main .collapse").on("hidden.bs.collapse", function() {
+  $(".navbar-main .collapse").on("hidden.bs.collapse", function () {
     var $this = $(this);
     $this.removeClass("collapsing-out");
   });
 
-  $(".navbar-main .dropdown").on("hide.bs.dropdown", function() {
+  $(".navbar-main .dropdown").on("hide.bs.dropdown", function () {
     var $this = $(this).find(".dropdown-menu");
 
     $this.addClass("close");
 
-    setTimeout(function() {
+    setTimeout(function () {
       $this.removeClass("close");
     }, 200);
   });
@@ -54,7 +54,7 @@ $(document).ready(function() {
 
   // Datepicker
   $(".datepicker")[0] &&
-    $(".datepicker").each(function() {
+    $(".datepicker").each(function () {
       $(".datepicker").datepicker({
         disableTouchKeyboard: true,
         autoclose: false
@@ -65,15 +65,14 @@ $(document).ready(function() {
   $('[data-toggle="tooltip"]').tooltip();
 
   // Popover
-  $('[data-toggle="popover"]').each(function() {
+  $('[data-toggle="popover"]').each(function () {
     var popoverClass = "";
     if ($(this).data("color")) {
       popoverClass = "popover-" + $(this).data("color");
     }
     $(this).popover({
       trigger: "focus",
-      template:
-        '<div class="popover ' +
+      template: '<div class="popover ' +
         popoverClass +
         '" role="tooltip"><div class="arrow"></div><h3 class="popover-header"></h3><div class="popover-body"></div></div>'
     });
@@ -81,7 +80,7 @@ $(document).ready(function() {
 
   // Additional .focus class on form-groups
   $(".form-control")
-    .on("focus blur", function(e) {
+    .on("focus blur", function (e) {
       $(this)
         .parents(".form-group")
         .toggleClass("focused", e.type === "focus" || this.value.length > 0);
@@ -90,7 +89,7 @@ $(document).ready(function() {
 
   // NoUI Slider
   if ($(".input-slider-container")[0]) {
-    $(".input-slider-container").each(function() {
+    $(".input-slider-container").each(function () {
       var slider = $(this).find(".input-slider");
       var sliderId = slider.attr("id");
       var minValue = slider.data("range-value-min");
@@ -113,7 +112,7 @@ $(document).ready(function() {
         }
       });
 
-      c.noUiSlider.on("update", function(a, b) {
+      c.noUiSlider.on("update", function (a, b) {
         d.textContent = a[b];
       });
     });
@@ -126,17 +125,17 @@ $(document).ready(function() {
       f = [d, e];
 
     noUiSlider.create(c, {
-      start: [
-        parseInt(d.getAttribute("data-range-value-low")),
-        parseInt(e.getAttribute("data-range-value-high"))
-      ],
-      connect: !0,
-      range: {
-        min: parseInt(c.getAttribute("data-range-value-min")),
-        max: parseInt(c.getAttribute("data-range-value-max"))
-      }
-    }),
-      c.noUiSlider.on("update", function(a, b) {
+        start: [
+          parseInt(d.getAttribute("data-range-value-low")),
+          parseInt(e.getAttribute("data-range-value-high"))
+        ],
+        connect: !0,
+        range: {
+          min: parseInt(c.getAttribute("data-range-value-min")),
+          max: parseInt(c.getAttribute("data-range-value-max"))
+        }
+      }),
+      c.noUiSlider.on("update", function (a, b) {
         f[b].textContent = a[b];
       });
   }
@@ -146,10 +145,10 @@ $(document).ready(function() {
     $('[data-toggle="on-screen"]').onScreen({
       container: window,
       direction: "vertical",
-      doIn: function() {
+      doIn: function () {
         //alert();
       },
-      doOut: function() {
+      doOut: function () {
         // Do something to the matched elements as they get off scren
       },
       tolerance: 200,
@@ -159,15 +158,14 @@ $(document).ready(function() {
     });
 
   // Scroll to anchor with scroll animation
-  $('[data-toggle="scroll"]').on("click", function(event) {
+  $('[data-toggle="scroll"]').on("click", function (event) {
     var hash = $(this).attr("href");
     var offset = $(this).data("offset") ? $(this).data("offset") : 0;
 
     // Animate scroll to the selected section
     $("html, body")
       .stop(true, true)
-      .animate(
-        {
+      .animate({
           scrollTop: $(hash).offset().top - offset
         },
         600

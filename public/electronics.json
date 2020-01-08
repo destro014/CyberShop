@@ -4,11 +4,11 @@
     "brand": "ACME",
     "type": "phone",
     "usability": "2",
-
     "price": 200,
     "rating": 3.8,
     "warranty_years": 1,
-    "available": true
+    "available": true,
+    "image": "https://i.pinimg.com/originals/00/13/2f/00132f445f0e1d1aad0b5d8c3acd4ee2.jpg"
 }, {
     "_id": "ac7",
     "title": "AC7 Phone",
@@ -19,7 +19,8 @@
     "price": 320,
     "rating": 4,
     "warranty_years": 1,
-    "available": false
+    "available": false,
+    "image": "https://www.sammobile.com/wp-content/uploads/2018/10/galaxy-a7-2018-review-8.jpg"
 }, {
     "_id": {
         "$oid": "507d95d5719dbef170f15bf9"
@@ -31,7 +32,8 @@
     "price": 19,
     "rating": 2.8,
     "warranty_years": 0.25,
-    "for": ["ac3", "ac7", "ac9"]
+    "for": ["ac3", "ac7", "ac9"],
+    "image": "https://i.pinimg.com/originals/cc/51/1d/cc511d5d9e11d8896cf5cfedf4ca07fe.jpg"
 }, {
     "_id": {
         "$oid": "507d95d5719dbef170f15bfa"
@@ -43,7 +45,8 @@
 
     "price": 12,
     "rating": 1,
-    "warranty_years": 0
+    "warranty_years": 0,
+    "image": "https://images.pexels.com/photos/212976/pexels-photo-212976.jpeg?cs=srgb&dl=iphone-5s-case-mobile-cover-noise-mobile-cover-phone-back-212976.jpg&fm=jpg"
 }, {
     "_id": {
         "$oid": "507d95d5719dbef170f15bfb"

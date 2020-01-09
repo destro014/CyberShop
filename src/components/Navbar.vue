@@ -119,7 +119,7 @@ export default {
     };
   },
   beforeMount() {
-    axios.get("categories.json").then(response => {
+    axios.get("../../categories.json").then(response => {
       this.categories = response.data;
       this.categories = this.categories.slice(0, 10);
     });

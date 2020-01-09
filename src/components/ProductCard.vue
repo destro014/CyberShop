@@ -5,7 +5,9 @@
         <progressive-img :src="product.image" :placeholder="this.image" :blur="0" />
       </div>
       <div class="product-details">
-        <h6 class="text-uppercase">{{ product.title }}</h6>
+        <router-link :to="{name : 'product', params: {name: product.title, id: product.id}}">
+          <h6 class="text-uppercase">{{ product.title }}</h6>
+        </router-link>
         <div>
           <span class="badge badge-pill badge-success" v-if="product.usability == 0">Brand New</span>
           <span class="badge badge-pill badge-info" v-if="product.usability == 1">used</span>

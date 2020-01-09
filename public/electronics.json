@@ -1,5 +1,5 @@
 [{
-    "_id": "ac3",
+    "id": "ac3",
     "title": "AC3 Phone",
     "brand": "ACME",
     "type": "phone",
@@ -10,7 +10,7 @@
     "available": true,
     "image": "https://i.pinimg.com/originals/00/13/2f/00132f445f0e1d1aad0b5d8c3acd4ee2.jpg"
 }, {
-    "_id": "ac7",
+    "id": "ac7",
     "title": "AC7 Phone",
     "brand": "ACME",
     "type": "phone",
@@ -22,7 +22,7 @@
     "available": false,
     "image": "https://www.sammobile.com/wp-content/uploads/2018/10/galaxy-a7-2018-review-8.jpg"
 }, {
-    "_id": {
+    "id": {
         "$oid": "507d95d5719dbef170f15bf9"
     },
     "title": "AC3 Series Charger",

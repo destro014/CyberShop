@@ -11,7 +11,7 @@
               <form>
                 <div
                   class="form-group mb-3"
-                  :class="{'has-success' : validEmail, 'has-danger':emailTyping && !validEmail}"
+                  :class="{'has-success' : validEmail, 'has-danger':emailTyping && !validEmail, 'focused' : emailFocus}"
                 >
                   <div class="input-group input-group-alternative">
                     <div class="input-group-prepend">
@@ -25,12 +25,13 @@
                       type="email"
                       v-model="email"
                       @input="checkEmail"
-                      @focus="emailTyping = true"
+                      @focus="onEmailFocus"
+                      @blur="onEmailBlur"
                       :class="{'is-valid' :validEmail,'is-invalid':emailTyping && !validEmail}"
                     />
                   </div>
                 </div>
-                <div class="form-group has-icon">
+                <div class="form-group has-icon" :class="{'focused' : passwordFocus}">
                   <div class="input-group input-group-alternative">
                     <div class="input-group-prepend">
                       <span class="input-group-text">
@@ -42,7 +43,8 @@
                       placeholder="Password"
                       :type="passwordType"
                       @input="checkPassword"
-                      @focus="passwordTyping = true"
+                      @focus="onPasswordFocus"
+                      @blur="onPasswordBlur"
                       v-model="password"
                     />
                   </div>
@@ -81,6 +83,7 @@
 </template>
 
 <script>
+import animation from "@/scripts/formAnimation.js";
 export default {
   name: "Login",
   data() {
@@ -89,6 +92,8 @@ export default {
       password: null,
       reg: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,24}))$/,
       emailTyping: false,
+      emailFocus: false,
+      passwordFocus: false,
       validEmail: null,
       validPassword: null,
       formFilled: false,
@@ -98,6 +103,22 @@ export default {
     };
   },
   methods: {
+    onEmailFocus() {
+      this.emailTyping = true;
+      this.emailFocus = true;
+    },
+    onEmailBlur() {
+      this.emailFocus = false;
+      this.emailTyping = false;
+    },
+    onPasswordFocus() {
+      this.passwordTyping = true;
+      this.passwordFocus = true;
+    },
+    onPasswordBlur() {
+      this.passwordFocus = false;
+      this.passwordTyping = false;
+    },
     checkEmail() {
       this.validEmail = this.reg.test(this.email);
       this.validForm();

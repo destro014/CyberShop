@@ -2,8 +2,8 @@
   <div class="home shifted">
     <hero />
     <Products :type="type1" :typeid="typeid1" :url="url1" />
-    <Products :type="type2" :typeid="typeid2" :url="url2" />
     <Categories :type="categoryType" />
+    <Products :type="type2" :typeid="typeid2" :url="url2" />
   </div>
 </template>
 

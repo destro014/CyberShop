@@ -11,7 +11,7 @@
               <form>
                 <div
                   class="form-group mb-3"
-                  :class="{'has-success' : validName, 'has-danger':nameTyping && !validName}"
+                  :class="{'has-success' : validName, 'has-danger':nameTyping && !validName, 'focused' : nameFocus}"
                 >
                   <div class="input-group input-group-alternative">
                     <div class="input-group-prepend">
@@ -25,14 +25,15 @@
                       type="name"
                       v-model="name"
                       @input="checkName"
-                      @focus="nameTyping = true"
+                      @focus="onNameFocus"
+                      @blur="onNameBlur"
                       :class="{'is-valid' :validName,'is-invalid':nameTyping && !validName}"
                     />
                   </div>
                 </div>
                 <div
                   class="form-group mb-3"
-                  :class="{'has-success' : validEmail, 'has-danger':emailTyping && !validEmail}"
+                  :class="{'has-success' : validEmail, 'has-danger':emailTyping && !validEmail,'focused' : emailFocus}"
                 >
                   <div class="input-group input-group-alternative">
                     <div class="input-group-prepend">
@@ -46,14 +47,15 @@
                       type="email"
                       v-model="email"
                       @input="checkEmail"
-                      @focus="emailTyping = true"
+                      @focus="onEmailFocus"
+                      @blur="onEmailBlur"
                       :class="{'is-valid' :validEmail,'is-invalid':emailTyping && !validEmail}"
                     />
                   </div>
                 </div>
                 <div
                   class="form-group has-icon mb-3"
-                  :class="{'has-success' : validPassword, 'has-danger' : passwordTyping && !validPassword}"
+                  :class="{'has-success' : validPassword, 'has-danger' : passwordTyping && !validPassword,'focused' : passwordFocus}"
                 >
                   <div class="input-group input-group-alternative">
                     <div class="input-group-prepend">
@@ -67,7 +69,8 @@
                       :type="passwordType"
                       v-model="password"
                       @input="checkPassword"
-                      @focus="reveal"
+                      @focus="onPasswordFocus"
+                      @blur="onPasswordBlur"
                       :class="{'is-valid':validPassword,'is-invalid' : !validPassword}"
                     />
                   </div>
@@ -142,9 +145,12 @@ export default {
       email: null,
       password: null,
       reg: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,24}))$/,
-      nameTyping: null,
+      nameTyping: false,
       passwordTyping: false,
       emailTyping: false,
+      nameFocus: false,
+      emailFocus: false,
+      passwordFocus: false,
       nameLength: 0,
       passwordLength: 0,
       containsEightCharacters: false,
@@ -159,6 +165,30 @@ export default {
     };
   },
   methods: {
+    onNameFocus() {
+      this.nameTyping = true;
+      this.nameFocus = true;
+    },
+    onEmailFocus() {
+      this.emailTyping = true;
+      this.emailFocus = true;
+    },
+    onPasswordFocus() {
+      this.passwordTyping = true;
+      this.passwordFocus = true;
+    },
+    onNameBlur() {
+      this.nameTyping = false;
+      this.nameFocus = false;
+    },
+    onEmailBlur() {
+      this.emailTyping = false;
+      this.emailFocus = false;
+    },
+    onPasswordBlur() {
+      // this.passwordTyping = false;
+      this.passwordFocus = false;
+    },
     checkName() {
       this.nameLength = this.name.length;
       if (this.nameLength > 3) {
@@ -171,9 +201,6 @@ export default {
     checkEmail() {
       this.validEmail = this.reg.test(this.email);
       this.validForm();
-    },
-    reveal() {
-      this.passwordTyping = true;
     },
     viewPassword() {
       this.viewingPassword = !this.viewingPassword;

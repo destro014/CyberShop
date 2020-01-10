@@ -2,44 +2,8 @@
   <div class="hero container-fluid">
     <div class="categories-bar">
       <ul>
-        <router-link :to="{name: 'about'}">
-          <li>Electronic devices</li>
-        </router-link>
-
-        <router-link :to="{name: 'about'}">
-          <li>Electronic Accesories</li>
-        </router-link>
-
-        <router-link :to="{name: 'about'}">
-          <li>Arts and Crafts</li>
-        </router-link>
-
-        <router-link :to="{name: 'about'}">
-          <li>Home and Lifestyle</li>
-        </router-link>
-
-        <router-link :to="{name: 'about'}">
-          <li>Sports and Outdoor</li>
-        </router-link>
-
-        <router-link :to="{name: 'about'}">
-          <li>Babies and toys</li>
-        </router-link>
-
-        <router-link :to="{name: 'about'}">
-          <li>Health and Beauty</li>
-        </router-link>
-
-        <router-link :to="{name: 'about'}">
-          <li>Clothes and fashion</li>
-        </router-link>
-
-        <router-link :to="{name: 'about'}">
-          <li>Automobiles and vehicles</li>
-        </router-link>
-
-        <router-link :to="{name: 'about'}">
-          <li>Automobiles and vehicles</li>
+        <router-link :to="{name: 'about'}" v-for="(category,index) in categories" :key="index">
+          <li>{{category.name}}</li>
         </router-link>
       </ul>
     </div>
@@ -50,13 +14,22 @@
 </template>
 
 <script>
+import axios from "axios";
 import PromoCarousel from "@/components/PromoCarousel.vue";
 import "vueperslides/dist/vueperslides.css";
 export default {
   name: "Hero",
   components: { PromoCarousel },
   data() {
-    return {};
+    return {
+      categories: null
+    };
+  },
+  beforeMount() {
+    axios.get("../../categories.json").then(response => {
+      this.categories = response.data;
+      this.categories = this.categories.slice(0, 10);
+    });
   }
 };
 </script>

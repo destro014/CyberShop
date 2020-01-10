@@ -1,194 +1,51 @@
 [{
-        "name": "Electronics Device",
-        "icon": "plug",
-        "link": "help"
+        "id": 1,
+        "name": "Electronic Devices",
+        "icon": "plug"
     },
     {
+        "id": 2,
+        "name": "Electronic Accessories",
+        "icon": "plug"
+    },
+    {
+        "id": 3,
+        "name": "Gitfs and Crafts",
+        "icon": "gift"
+    },
+    {
+        "id": 4,
+        "name": "Home and Lifestyle",
+        "icon": "couch"
+    },
+    {
+        "id": 5,
         "name": "Sports and Outdoor",
-        "icon": "futbol",
-        "link": "help"
+        "icon": "futbol"
     },
     {
+        "id": 6,
         "name": "Babies and Toys",
-        "icon": "baby",
-        "link": "help"
+        "icon": "baby"
     },
     {
+        "id": 7,
+        "name": "Health and Beauty",
+        "icon": "heart"
+    },
+    {
+        "id": 8,
+        "name": "Clothes and Fashion",
+        "icon": "tshirt"
+    },
+    {
+        "id": 9,
         "name": "Automobile and Vehicles",
-        "icon": "car",
-        "link": "help"
+        "icon": "car"
     },
     {
-        "name": "Clothes and Lifestyle",
-        "icon": "tshirt",
-        "link": "help"
-    }, {
-        "name": "Electronics Device",
-        "icon": "plug",
-        "link": "help"
-    },
-    {
-        "name": "Sports and Outdoor",
-        "icon": "futbol",
-        "link": "help"
-    },
-    {
-        "name": "Babies and Toys",
-        "icon": "baby",
-        "link": "help"
-    },
-    {
-        "name": "Automobile and Vehicles",
-        "icon": "car",
-        "link": "help"
-    },
-    {
-        "name": "Clothes and Lifestyle",
-        "icon": "tshirt",
-        "link": "help"
-    }, {
-        "name": "Electronics Device",
-        "icon": "plug",
-        "link": "help"
-    },
-    {
-        "name": "Sports and Outdoor",
-        "icon": "futbol",
-        "link": "help"
-    },
-    {
-        "name": "Babies and Toys",
-        "icon": "baby",
-        "link": "help"
-    },
-    {
-        "name": "Automobile and Vehicles",
-        "icon": "car",
-        "link": "help"
-    },
-    {
-        "name": "Clothes and Lifestyle",
-        "icon": "tshirt",
-        "link": "help"
-    }, {
-        "name": "Electronics Device",
-        "icon": "plug",
-        "link": "help"
-    },
-    {
-        "name": "Sports and Outdoor",
-        "icon": "futbol",
-        "link": "help"
-    },
-    {
-        "name": "Babies and Toys",
-        "icon": "baby",
-        "link": "help"
-    },
-    {
-        "name": "Automobile and Vehicles",
-        "icon": "car",
-        "link": "help"
-    },
-    {
-        "name": "Clothes and Lifestyle",
-        "icon": "tshirt",
-        "link": "help"
-    }, {
-        "name": "Electronics Device",
-        "icon": "plug",
-        "link": "help"
-    },
-    {
-        "name": "Sports and Outdoor",
-        "icon": "futbol",
-        "link": "help"
-    },
-    {
-        "name": "Babies and Toys",
-        "icon": "baby",
-        "link": "help"
-    },
-    {
-        "name": "Automobile and Vehicles",
-        "icon": "car",
-        "link": "help"
-    },
-    {
-        "name": "Clothes and Lifestyle",
-        "icon": "tshirt",
-        "link": "help"
-    }, {
-        "name": "Electronics Device",
-        "icon": "plug",
-        "link": "help"
-    },
-    {
-        "name": "Sports and Outdoor",
-        "icon": "futbol",
-        "link": "help"
-    },
-    {
-        "name": "Babies and Toys",
-        "icon": "baby",
-        "link": "help"
-    },
-    {
-        "name": "Automobile and Vehicles",
-        "icon": "car",
-        "link": "help"
-    },
-    {
-        "name": "Clothes and Lifestyle",
-        "icon": "tshirt",
-        "link": "help"
-    }, {
-        "name": "Electronics Device",
-        "icon": "plug",
-        "link": "help"
-    },
-    {
-        "name": "Sports and Outdoor",
-        "icon": "futbol",
-        "link": "help"
-    },
-    {
-        "name": "Babies and Toys",
-        "icon": "baby",
-        "link": "help"
-    },
-    {
-        "name": "Automobile and Vehicles",
-        "icon": "car",
-        "link": "help"
-    },
-    {
-        "name": "Clothes and Lifestyle",
-        "icon": "tshirt",
-        "link": "help"
-    }, {
-        "name": "Electronics Device",
-        "icon": "plug",
-        "link": "help"
-    },
-    {
-        "name": "Sports and Outdoor",
-        "icon": "futbol",
-        "link": "help"
-    },
-    {
-        "name": "Babies and Toys",
-        "icon": "baby",
-        "link": "help"
-    },
-    {
-        "name": "Automobile and Vehicles",
-        "icon": "car",
-        "link": "help"
-    },
-    {
-        "name": "Clothes and Lifestyle",
-        "icon": "tshirt",
-        "link": "help"
+        "id": 10,
+        "name": "Real Estate and Properties",
+        "icon": "building"
     }
 ]

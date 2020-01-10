@@ -22,7 +22,11 @@ import {
   faTimesCircle,
   faCheckCircle,
   faEye,
-  faEyeSlash
+  faEyeSlash,
+  faCouch,
+  faHeart,
+  faGift,
+  faBuilding
 } from "@fortawesome/free-solid-svg-icons";
 import {
   FontAwesomeIcon,
@@ -30,7 +34,7 @@ import {
   FontAwesomeLayersText
 } from "@fortawesome/vue-fontawesome";
 library.add(faPlug, faSearch, faList, faArrowCircleRight, faFutbol, faBaby, faCar, faTshirt, faLock, faEnvelope,
-  faChevronRight, faUser, faTimesCircle, faCheckCircle, faEye, faEyeSlash);
+  faChevronRight, faUser, faTimesCircle, faCheckCircle, faEye, faEyeSlash, faCouch, faHeart, faGift, faBuilding);
 Vue.component("font-awesome-icon", FontAwesomeIcon);
 Vue.component('font-awesome-layers', FontAwesomeLayers)
 Vue.component('font-awesome-layers-text', FontAwesomeLayersText)

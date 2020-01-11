@@ -5,7 +5,7 @@
         <div class="icon">
           <font-awesome-icon :icon="['fas',category.icon ]" />
         </div>
-        <div class="category">{{category.name}}</div>
+        <div class="category">{{category.title}}</div>
       </div>
     </router-link>
   </div>

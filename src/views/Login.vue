@@ -83,7 +83,6 @@
 </template>
 
 <script>
-import animation from "@/scripts/formAnimation.js";
 export default {
   name: "Login",
   data() {

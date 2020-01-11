@@ -3,12 +3,16 @@
     <div class="container-fluid">
       <h5>Categories</h5>
       <div class="row">
-        <div class="col-lg-2" v-for="(category, i) in categories" :key="i">
+        <div
+          class="col-lg-2 col-md-3 col-sm-6 col-xs-6"
+          v-for="(category, i) in someCategories"
+          :key="i"
+        >
           <CategoryCard :category="category" />
         </div>
-        <div class="col-lg-2" v-if="type == 0">
+        <div class="col-lg-2 col-md-3 col-sm-6 col-xs-6" v-if="type == 0">
           <CategoryCard
-            :category="{name: 'View All', icon: 'arrow-circle-right', link: 'categories'}"
+            :category="{title: 'View All', icon: 'arrow-circle-right', link: 'categories'}"
           />
         </div>
       </div>
@@ -18,7 +22,7 @@
 
 <script>
 import CategoryCard from "@/components/CategoryCard.vue";
-import axios from "axios";
+import { mapGetters, mapActions } from "vuex";
 export default {
   name: "Categories",
   props: ["type"],
@@ -27,16 +31,17 @@ export default {
   },
   data() {
     return {
-      categories: null
+      // categories: null
     };
   },
+  methods: {
+    ...mapActions(["trimCategories"])
+  },
+  computed: {
+    ...mapGetters(["someCategories"])
+  },
   beforeMount() {
-    axios.get("categories.json").then(response => {
-      this.categories = response.data;
-      if (this.type == 0) {
-        this.categories = this.categories.slice(0, 5);
-      }
-    });
+    this.trimCategories();
   }
 };
 </script>

@@ -51,8 +51,8 @@
             </a>
             <div class="dropdown-menu">
               <router-link
-                v-for="(category,index) in allCategories"
-                :key="index"
+                v-for="category in allCategories"
+                :key="category.cat_identifier"
                 :to="{name: category.link}"
                 class="dropdown-item"
               >{{category.title}}</router-link>

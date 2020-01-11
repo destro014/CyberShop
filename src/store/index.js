@@ -1,13 +1,12 @@
 import Vue from "vue";
 import Vuex from "vuex";
-import axios from "axios";
+import categories from './modules/categories';
 
 
 Vue.use(Vuex);
 
 export default new Vuex.Store({
-  state: {},
-  mutations: {},
-  getters: {},
-  modules: {}
+  modules: {
+    categories
+  }
 });

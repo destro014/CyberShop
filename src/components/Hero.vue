@@ -2,8 +2,12 @@
   <div class="hero container-fluid">
     <div class="categories-bar">
       <ul>
-        <router-link :to="{name: 'about'}" v-for="(category,index) in categories" :key="index">
-          <li>{{category.name}}</li>
+        <router-link
+          :to="{name: 'about'}"
+          v-for="category in allCategories"
+          :key="category.cat_identifiers"
+        >
+          <li>{{category.title}}</li>
         </router-link>
       </ul>
     </div>
@@ -14,7 +18,7 @@
 </template>
 
 <script>
-import axios from "axios";
+import { mapGetters, mapActions } from "vuex";
 import PromoCarousel from "@/components/PromoCarousel.vue";
 import "vueperslides/dist/vueperslides.css";
 export default {
@@ -25,11 +29,12 @@ export default {
       categories: null
     };
   },
+  methods: {
+    // ...mapActions(["fetchCategories"])
+  },
+  computed: mapGetters(["allCategories"]),
   beforeMount() {
-    axios.get("../../categories.json").then(response => {
-      this.categories = response.data;
-      this.categories = this.categories.slice(0, 10);
-    });
+    // this.fetchCategories();
   }
 };
 </script>

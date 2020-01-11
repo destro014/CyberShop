@@ -51,15 +51,11 @@
             </a>
             <div class="dropdown-menu">
               <router-link
-                v-for="(category,index) in categories"
+                v-for="(category,index) in allCategories"
                 :key="index"
                 :to="{name: category.link}"
                 class="dropdown-item"
-              >{{category.name}}</router-link>
-              <router-link :to="{name: 'categories'}" class="dropdown-item">
-                View All
-                <font-awesome-icon :icon="['fas', 'chevron-right']" />
-              </router-link>
+              >{{category.title}}</router-link>
             </div>
           </li>
         </ul>
@@ -111,19 +107,20 @@
 </template>
 
 <script>
-import axios from "axios";
+import { mapGetters, mapActions } from "vuex";
 export default {
   name: "Navbar",
   data() {
     return {
-      categories: null
+      // categories: null
     };
   },
+  methods: {
+    ...mapActions(["fetchCategories"])
+  },
+  computed: mapGetters(["allCategories"]),
   beforeMount() {
-    axios.get("../../categories.json").then(response => {
-      this.categories = response.data;
-      this.categories = this.categories.slice(0, 10);
-    });
+    this.fetchCategories();
   }
 };
 </script>

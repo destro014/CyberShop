@@ -1,9 +1,9 @@
 <template>
   <div class="home shifted">
     <hero />
-    <Products :type="type1" :typeid="typeid1" :url="url1" />
+    <Products :type="type1" :typeid="typeid1" />
     <Categories :type="categoryType" />
-    <Products :type="type2" :typeid="typeid2" :url="url2" />
+    <Products :type="type2" :typeid="typeid2" />
   </div>
 </template>
 
@@ -23,12 +23,10 @@ export default {
   data() {
     return {
       type1: "Recently listed",
-      typeid1: 1,
-      url1: "/recent.json",
-      url2: "/electronics.json",
+      typeid1: 0,
+      categoryType: 0,
       type2: "Electronics",
-      typeid2: 2,
-      categoryType: 0
+      typeid2: 1
     };
   }
 };

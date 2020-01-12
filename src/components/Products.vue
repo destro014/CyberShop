@@ -5,7 +5,11 @@
       <a href="#">View more</a>
     </div>
     <div class="row">
-      <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12" v-for="(product, i) in products" :key="i">
+      <div
+        class="col-lg-3 col-md-3 col-sm-6 col-xs-12"
+        v-for="(product, i) in computedProducts()"
+        :key="i"
+      >
         <ProductCard :product="product" />
       </div>
     </div>
@@ -13,27 +17,46 @@
 </template>
 
 <script>
-import axios from "axios";
+import { mapGetters, mapActions } from "vuex";
 import ProductCard from "@/components/ProductCard.vue";
 export default {
   name: "Products",
   components: { ProductCard },
-  props: ["type", "typeid", "url"],
+  props: ["type", "typeid"],
   data() {
     return {
-      products: null
+      // products: null
     };
   },
-  created() {
-    axios.get(this.url).then(response => {
-      this.products = response.data;
-      if (this.typeid == 1) {
-        this.products = this.products.sort(
-          (a, b) => new Date(b.date) - new Date(a.date)
-        );
+  computed: {
+    ...mapGetters(["allProducts"]),
+    ...mapGetters(["recentProducts"]),
+    ...mapGetters(["electronicsProducts"])
+  },
+  methods: {
+    ...mapActions(["fetchProducts"]),
+    ...mapActions(["fetchRecentProducts"]),
+    ...mapActions(["fetchElectronicsProducts"]),
+    computedProducts() {
+      if (this.typeid == 0) {
+        return this.recentProducts;
       }
-      this.products = this.products.slice(0, 4);
-    });
+      if (this.typeid == 1) {
+        // this.allProducts.filter(obj => {
+        //   if (obj.category.id == this.typeid) {
+        //     return obj;
+        //   }
+        // });
+        return this.electronicsProducts;
+      } else {
+        return this.allProducts;
+      }
+    }
+  },
+  beforeMount() {
+    this.fetchProducts();
+    this.fetchRecentProducts();
+    this.fetchElectronicsProducts();
   }
 };
 </script>

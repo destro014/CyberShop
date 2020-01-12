@@ -5,7 +5,7 @@
       <div class="row">
         <div
           class="col-lg-2 col-md-3 col-sm-6 col-xs-6"
-          v-for="(category, i) in someCategories"
+          v-for="(category, i) in categories()"
           :key="i"
         >
           <CategoryCard :category="category" />
@@ -35,10 +35,18 @@ export default {
     };
   },
   methods: {
-    ...mapActions(["trimCategories"])
+    ...mapActions(["trimCategories"]),
+    categories() {
+      if (this.type == 1) {
+        return this.allCategories;
+      } else {
+        return this.someCategories;
+      }
+    }
   },
   computed: {
-    ...mapGetters(["someCategories"])
+    ...mapGetters(["someCategories"]),
+    ...mapGetters(["allCategories"])
   },
   beforeMount() {
     this.trimCategories();

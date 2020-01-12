@@ -3,6 +3,8 @@ import axios from 'axios'
 const state = {
     categories: null,
     fiveCategories: null,
+    // endpoint: "https://internshopapi.000webhostapp.com/api/categories"
+    endpoint: "../../categories.json"
 };
 const getters = {
     allCategories: state => state.categories,
@@ -12,14 +14,14 @@ const actions = {
     async fetchCategories({
         commit
     }) {
-        const response = await axios.get("https://internshopapi.000webhostapp.com/api/categories");
-        commit('setCategories', response.data.data);
+        const response = await axios.get(state.endpoint);
+        commit('setCategories', response.data);
     },
     async trimCategories({
         commit
     }) {
-        const response = await axios.get("https://internshopapi.000webhostapp.com/api/categories");
-        commit('randomCategories', (response.data.data).sort(() => .5 - Math.random()).slice(0, 5));
+        const response = await axios.get(state.endpoint);
+        commit('randomCategories', (response.data).sort(() => .5 - Math.random()).slice(0, 5));
     }
 };
 const mutations = {

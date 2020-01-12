@@ -1,51 +1,51 @@
 [{
         "id": 1,
-        "name": "Electronic Devices",
+        "title": "Electronic Devices",
         "icon": "laptop"
     },
     {
         "id": 2,
-        "name": "Electronic Accessories",
+        "title": "Electronic Accessories",
         "icon": "plug"
     },
     {
         "id": 3,
-        "name": "Gitfs and Crafts",
+        "title": "Gitfs and Crafts",
         "icon": "gift"
     },
     {
         "id": 4,
-        "name": "Home and Lifestyle",
+        "title": "Home and Lifestyle",
         "icon": "couch"
     },
     {
         "id": 5,
-        "name": "Sports and Outdoor",
+        "title": "Sports and Outdoor",
         "icon": "futbol"
     },
     {
         "id": 6,
-        "name": "Babies and Toys",
+        "title": "Babies and Toys",
         "icon": "baby"
     },
     {
         "id": 7,
-        "name": "Health and Beauty",
+        "title": "Health and Beauty",
         "icon": "heart"
     },
     {
         "id": 8,
-        "name": "Clothes and Fashion",
+        "title": "Clothes and Fashion",
         "icon": "tshirt"
     },
     {
         "id": 9,
-        "name": "Automobile and Vehicles",
+        "title": "Automobile and Vehicles",
         "icon": "car"
     },
     {
         "id": 10,
-        "name": "Real Estate and Properties",
+        "title": "Real Estate and Properties",
         "icon": "building"
     }
 ]

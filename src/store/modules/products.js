@@ -29,7 +29,7 @@ const actions = {
         commit
     }) {
         const response = await axios.get(state.endpoint);
-        commit('setElectronicsProducts', response.data.filter(obj => {
+        commit('setElectronicsProducts', response.data.sort(() => .5 - Math.random()).filter(obj => {
             if (obj.category.id == 1) {
                 return obj;
             }

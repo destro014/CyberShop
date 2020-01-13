@@ -84,7 +84,7 @@ const routes = [{
     component: () =>
       import( /* webpackChunkName: "about" */ "../views/ProductDetails.vue"),
     meta: {
-      // title: $route.params.name
+      title: 'Buy in Cybershop'
     }
   }
 ];

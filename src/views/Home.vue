@@ -22,10 +22,10 @@ export default {
   },
   data() {
     return {
-      type1: "Recently listed",
+      type1: "Recently listed products",
       typeid1: 0,
       categoryType: 0,
-      type2: "Electronics",
+      type2: "Electronics devices",
       typeid2: 1
     };
   }

@@ -32,14 +32,14 @@ export default {
       slides: [
         {
           link: "about",
-          image: require("../assets/img/promo/1.png")
+          image: require("../assets/img/promo/2.png")
         },
         {
           image: require("../assets/img/promo/1.png"),
-          link: "about"
+          link: "/product/1/Lenovo%20yoga%20320"
         },
         {
-          image: require("../assets/img/promo/1.png"),
+          image: require("../assets/img/promo/2.png"),
           link: "register"
         },
         {

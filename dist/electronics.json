@@ -1,0 +1,179 @@
+[{
+    "id": "ac3",
+    "title": "AC3 Phone",
+    "brand": "ACME",
+    "type": "phone",
+    "usability": "2",
+    "price": 200,
+    "rating": 3.8,
+    "warranty_years": 1,
+    "available": true,
+    "image": "https://i.pinimg.com/originals/00/13/2f/00132f445f0e1d1aad0b5d8c3acd4ee2.jpg"
+}, {
+    "id": "ac7",
+    "title": "AC7 Phone",
+    "brand": "ACME",
+    "type": "phone",
+    "usability": "0",
+
+    "price": 320,
+    "rating": 4,
+    "warranty_years": 1,
+    "available": false,
+    "image": "https://www.sammobile.com/wp-content/uploads/2018/10/galaxy-a7-2018-review-8.jpg"
+}, {
+    "id": {
+        "$oid": "507d95d5719dbef170f15bf9"
+    },
+    "title": "AC3 Series Charger",
+    "type": ["accessory", "charger"],
+    "usability": "1",
+
+    "price": 19,
+    "rating": 2.8,
+    "warranty_years": 0.25,
+    "for": ["ac3", "ac7", "ac9"],
+    "image": "https://i.pinimg.com/originals/cc/51/1d/cc511d5d9e11d8896cf5cfedf4ca07fe.jpg"
+}, {
+    "_id": {
+        "$oid": "507d95d5719dbef170f15bfa"
+    },
+    "title": "AC3 Case Green",
+    "type": ["accessory", "case"],
+    "color": "green",
+    "usability": "0",
+
+    "price": 12,
+    "rating": 1,
+    "warranty_years": 0,
+    "image": "https://images.pexels.com/photos/212976/pexels-photo-212976.jpeg?cs=srgb&dl=iphone-5s-case-mobile-cover-noise-mobile-cover-phone-back-212976.jpg&fm=jpg"
+}, {
+    "_id": {
+        "$oid": "507d95d5719dbef170f15bfb"
+    },
+    "title": "Phone Extended Warranty",
+    "type": "warranty",
+    "price": 38,
+    "rating": 5,
+    "warranty_years": 2,
+    "for": ["ac3", "ac7", "ac9", "qp7", "qp8", "qp9"]
+}, {
+    "_id": {
+        "$oid": "507d95d5719dbef170f15bfc"
+    },
+    "title": "AC3 Case Black",
+    "type": ["accessory", "case"],
+    "color": "black",
+    "price": 12.5,
+    "rating": 2,
+    "warranty_years": 0.25,
+    "available": false,
+    "for": "ac3"
+}, {
+    "_id": {
+        "$oid": "507d95d5719dbef170f15bfd"
+    },
+    "title": "AC3 Case Red",
+    "type": ["accessory", "case"],
+    "color": "red",
+    "price": 12,
+    "rating": 4,
+    "warranty_years": 0.25,
+    "available": true,
+    "for": "ac3"
+}, {
+    "_id": {
+        "$oid": "507d95d5719dbef170f15bfe"
+    },
+    "title": "Phone Service Basic Plan",
+    "type": "service",
+    "monthly_price": 40,
+    "rating": 3,
+    "limits": {
+        "voice": {
+            "units": "minutes",
+            "n": 400,
+            "over_rate": 0.05
+        },
+        "data": {
+            "units": "gigabytes",
+            "n": 20,
+            "over_rate": 1
+        },
+        "sms": {
+            "units": "texts sent",
+            "n": 100,
+            "over_rate": 0.001
+        }
+    },
+    "term_years": 2
+}, {
+    "_id": {
+        "$oid": "507d95d5719dbef170f15bff"
+    },
+    "title": "Phone Service Core Plan",
+    "type": "service",
+    "monthly_price": 60,
+    "rating": 3,
+    "limits": {
+        "voice": {
+            "units": "minutes",
+            "n": 1000,
+            "over_rate": 0.05
+        },
+        "data": {
+            "n": "unlimited",
+            "over_rate": 0
+        },
+        "sms": {
+            "n": "unlimited",
+            "over_rate": 0
+        }
+    },
+    "term_years": 1
+}, {
+    "_id": {
+        "$oid": "507d95d5719dbef170f15c00"
+    },
+    "title": "Phone Service Family Plan",
+    "type": "service",
+    "monthly_price": 90,
+    "rating": 4,
+    "limits": {
+        "voice": {
+            "units": "minutes",
+            "n": 1200,
+            "over_rate": 0.05
+        },
+        "data": {
+            "n": "unlimited",
+            "over_rate": 0
+        },
+        "sms": {
+            "n": "unlimited",
+            "over_rate": 0
+        }
+    },
+    "sales_tax": true,
+    "term_years": 2
+}, {
+    "_id": {
+        "$oid": "507d95d5719dbef170f15c01"
+    },
+    "title": "Cable TV Basic Service Package",
+    "type": "tv",
+    "monthly_price": 50,
+    "rating": 3.9,
+    "term_years": 2,
+    "cancel_penalty": 25,
+    "sales_tax": true,
+    "additional_tarriffs": [{
+        "kind": "federal tarriff",
+        "amount": {
+            "percent_of_service": 0.06
+        }
+    }, {
+        "kind": "misc tarriff",
+        "amount": 2.25
+    }]
+}]

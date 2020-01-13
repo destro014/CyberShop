@@ -1,0 +1,51 @@
+[{
+        "id": 1,
+        "title": "Electronic Devices",
+        "icon": "laptop"
+    },
+    {
+        "id": 2,
+        "title": "Electronic Accessories",
+        "icon": "plug"
+    },
+    {
+        "id": 3,
+        "title": "Gitfs and Crafts",
+        "icon": "gift"
+    },
+    {
+        "id": 4,
+        "title": "Home and Lifestyle",
+        "icon": "couch"
+    },
+    {
+        "id": 5,
+        "title": "Sports and Outdoor",
+        "icon": "futbol"
+    },
+    {
+        "id": 6,
+        "title": "Babies and Toys",
+        "icon": "baby"
+    },
+    {
+        "id": 7,
+        "title": "Health and Beauty",
+        "icon": "heart"
+    },
+    {
+        "id": 8,
+        "title": "Clothes and Fashion",
+        "icon": "tshirt"
+    },
+    {
+        "id": 9,
+        "title": "Automobile and Vehicles",
+        "icon": "car"
+    },
+    {
+        "id": 10,
+        "title": "Real Estate and Properties",
+        "icon": "building"
+    }
+]

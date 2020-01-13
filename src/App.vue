@@ -15,14 +15,16 @@ export default {
   components: {
     Navbar,
     Footer
-  },    
+  },
   watch: {
-      '$route' (to, from) {
-        document.title = to.meta.title || 'Your Website'
+    $route: {
+      handler: (to, from) => {
+        document.title = to.params.name
+          ? to.params.name + " || " + to.meta.title
+          : to.meta.title;
       }
-    },
-
-
+    }
+  }
 };
 </script>
 

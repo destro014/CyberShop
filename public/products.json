@@ -1,0 +1,415 @@
+[{
+    "product_identifier": 1,
+    "title": "Lenovo yoga 320",
+    "details": "Placeat iure odit sequi enim eligendi. Soluta tempora est et modi accusamus pariatur voluptatum.",
+    "stock": 6,
+    "usability": "0",
+    "price": "85,000",
+    "situation": "Available",
+    "image": "https://i.pinimg.com/originals/f2/c9/a3/f2c9a318c0a5ee3afe330b0a29845a30.jpg",
+    "seller": 9,
+    "creationDate": "2018-01-10 11:12:10",
+    "lastChange": "2018-01-10 11:12:10",
+    "detetedDate": null,
+    "category": {
+        "id": [
+            1
+        ]
+    }
+}, {
+    "product_identifier": 2,
+    "title": "90 W laptop charger",
+    "details": "Placeat iure odit sequi enim eligendi. Soluta tempora est et modi accusamus pariatur voluptatum.",
+    "stock": 6,
+    "usability": "0",
+    "price": "1,000",
+    "situation": "Available",
+    "image": "http://internshopapi.000webhostapp.com/img/2.jpg",
+    "seller": 3,
+    "creationDate": "2018-02-10 11:12:10",
+    "lastChange": "2018-02-10 11:12:10",
+    "detetedDate": null,
+    "category": {
+        "id": [
+            2
+        ]
+    }
+}, {
+    "product_identifier": 3,
+    "title": "Monalisa Panting",
+    "details": "Placeat iure odit sequi enim eligendi. Soluta tempora est et modi accusamus pariatur voluptatum.",
+    "stock": 6,
+    "usability": "0",
+    "price": "1,85,000",
+    "situation": "Available",
+    "image": "http://internshopapi.000webhostapp.com/img/2.jpg",
+    "seller": 4,
+    "creationDate": "2018-01-10 11:12:10",
+    "lastChange": "2018-01-10 11:12:10",
+    "detetedDate": null,
+    "category": {
+        "id": [
+            3
+        ]
+    }
+}, {
+    "product_identifier": 4,
+    "title": "Tea table",
+    "price": "5,000",
+    "details": "Placeat iure odit sequi enim eligendi. Soluta tempora est et modi accusamus pariatur voluptatum.",
+    "stock": 6,
+    "usability": "1",
+    "situation": "Available",
+    "image": "http://internshopapi.000webhostapp.com/img/2.jpg",
+    "seller": 3,
+    "creationDate": "2019-02-10 11:12:10",
+    "lastChange": "2019-02-10 11:12:10",
+    "detetedDate": null,
+    "category": {
+        "id": [
+            4
+        ]
+    }
+}, {
+    "product_identifier": 5,
+    "title": "Tent",
+    "details": "Placeat iure odit sequi enim eligendi. Soluta tempora est et modi accusamus pariatur voluptatum.",
+    "stock": 6,
+    "usability": "1",
+    "price": "2,500",
+    "situation": "Available",
+    "image": "http://internshopapi.000webhostapp.com/img/2.jpg",
+    "seller": 18,
+    "creationDate": "2019-02-10 11:12:10",
+    "lastChange": "2019-02-10 11:12:10",
+    "detetedDate": null,
+    "category": {
+        "id": [
+            4
+        ]
+    }
+}, {
+    "product_identifier": 6,
+    "title": "RC car",
+    "price": "4,000",
+    "details": "Placeat iure odit sequi enim eligendi. Soluta tempora est et modi accusamus pariatur voluptatum.",
+    "stock": 6,
+    "usability": "1",
+    "situation": "Available",
+    "image": "http://internshopapi.000webhostapp.com/img/2.jpg",
+    "seller": 11,
+    "creationDate": "2020-01-01 11:12:10",
+    "lastChange": "2020-01-01 11:12:10",
+    "detetedDate": null,
+    "category": {
+        "id": [
+            6
+        ]
+    }
+}, {
+    "product_identifier": 7,
+    "title": "5kg. Dumbell",
+    "details": "Placeat iure odit sequi enim eligendi. Soluta tempora est et modi accusamus pariatur voluptatum.",
+    "stock": 1,
+    "usability": "1",
+    "price": "500",
+    "situation": "Available",
+    "image": "https://www.renderhub.com/dekogon-studios/weight-set/weight-set-05.jpg",
+    "seller": 16,
+    "creationDate": "2020-01-10 11:12:10",
+    "lastChange": "2020-01-10 11:12:10",
+    "detetedDate": null,
+    "category": {
+        "id": [
+            7
+        ]
+    }
+}, {
+    "product_identifier": 8,
+    "title": "Northface Down Jacket",
+    "details": "Placeat iure odit sequi enim eligendi. Soluta tempora est et modi accusamus pariatur voluptatum.",
+    "stock": 6,
+    "usability": "0",
+    "price": "1,500",
+    "situation": "Available",
+    "image": "http://internshopapi.000webhostapp.com/img/2.jpg",
+    "seller": 12,
+    "creationDate": "2018-01-10 11:12:10",
+    "lastChange": "2018-01-10 11:12:10",
+    "detetedDate": null,
+    "category": {
+        "id": [
+            8
+        ]
+    }
+}, {
+    "product_identifier": 9,
+    "title": "Pulsar NS 200",
+    "details": "Placeat iure odit sequi enim eligendi. Soluta tempora est et modi accusamus pariatur voluptatum.",
+    "stock": 1,
+    "usability": "1",
+    "price": "1,85,000",
+    "situation": "Available",
+    "image": "https://stat.overdrive.in/wp-content/odgallery/2017/02/33089_Pulsar_NS200.jpg",
+    "seller": 21,
+    "creationDate": "2020-01-10 11:12:10",
+    "lastChange": "2018-01-10 11:12:10",
+    "detetedDate": null,
+    "category": {
+        "id": [
+            9
+        ]
+    }
+}, {
+    "product_identifier": 10,
+    "title": "3 BHK Flat",
+    "price": "15,000",
+    "details": "Placeat iure odit sequi enim eligendi. Soluta tempora est et modi accusamus pariatur voluptatum.",
+    "stock": 1,
+    "usability": "1",
+    "situation": "Available",
+    "image": "http://internshopapi.000webhostapp.com/img/2.jpg",
+    "seller": 9,
+    "creationDate": "2020-01-03 11:12:10",
+    "lastChange": "2020-01-03 11:12:10",
+    "detetedDate": null,
+    "category": {
+        "id": [
+            10
+        ]
+    }
+}, {
+    "product_identifier": 11,
+    "title": "Apple watch series 5",
+    "details": "Placeat iure odit sequi enim eligendi. Soluta tempora est et modi accusamus pariatur voluptatum.",
+    "stock": 6,
+    "usability": "0",
+    "price": "55,000",
+    "situation": "Available",
+    "image": "https://wallpapershome.com/images/wallpapers/apple-watch-series-5-1920x1080-apple-september-2019-event-4k-22073.jpg",
+    "seller": 10,
+    "creationDate": "2020-01-12 11:12:10",
+    "lastChange": "2020-01-12 11:12:10",
+    "detetedDate": null,
+    "category": {
+        "id": [
+            1
+        ]
+    }
+}, {
+    "product_identifier": 12,
+    "title": "Samsung galaxy M20",
+    "details": "Placeat iure odit sequi enim eligendi. Soluta tempora est et modi accusamus pariatur voluptatum.",
+    "stock": 6,
+    "usability": "2",
+    "price": "17,000",
+    "situation": "Available",
+    "image": "https://www.gizmotimes.com/wp-content/uploads/2019/02/Samsung-Galaxy-M20-Review.jpg",
+    "seller": 9,
+    "creationDate": "2018-01-10 11:12:10",
+    "lastChange": "2018-01-10 11:12:10",
+    "detetedDate": null,
+    "category": {
+        "id": [
+            1
+        ]
+    }
+}, {
+    "product_identifier": 13,
+    "title": "Apple iPhone 11 pro max",
+    "details": "Placeat iure odit sequi enim eligendi. Soluta tempora est et modi accusamus pariatur voluptatum.",
+    "stock": 6,
+    "usability": "0",
+    "price": "1,85,000",
+    "situation": "Available",
+    "image": "https://cnet4.cbsistatic.com/img/xKwUeQmZ0IXkIaLZdqNEnZVX1OU=/2019/09/10/5a3a4818-87ac-4608-8c96-219c1a632c6d/iphone11pro.jpg",
+    "seller": 9,
+    "creationDate": "2020-01-5 11:12:10",
+    "lastChange": "2020-01-5 11:12:10",
+    "detetedDate": null,
+    "category": {
+        "id": [
+            1
+        ]
+    }
+}, {
+    "product_identifier": 14,
+    "title": "Samsung note 10 Lite",
+    "price": "85,000",
+    "details": "Placeat iure odit sequi enim eligendi. Soluta tempora est et modi accusamus pariatur voluptatum.",
+    "stock": 6,
+    "usability": "0",
+    "situation": "Available",
+    "image": "https://cdn57.androidauthority.net/wp-content/uploads/2019/12/Samsung-Galaxy-Note10-Lite-Leak-WinFuture.jpg",
+    "seller": 9,
+    "creationDate": "2020-01-05 11:12:10",
+    "lastChange": "2020-01-05 11:12:10",
+    "detetedDate": null,
+    "category": {
+        "id": [
+            1
+        ]
+    }
+}, {
+    "product_identifier": 15,
+    "title": "Samsung 512 GB SSD External Harddisk",
+    "details": "Placeat iure odit sequi enim eligendi. Soluta tempora est et modi accusamus pariatur voluptatum.",
+    "stock": 6,
+    "usability": "1",
+    "price": "15,000",
+    "situation": "Available",
+    "image": "https://www.backblaze.com/blog/wp-content/uploads/2016/12/samsung_850.jpg",
+    "seller": 9,
+    "creationDate": "2020-01-06 11:12:10",
+    "lastChange": "2020-01-06 11:12:10",
+    "detetedDate": null,
+    "category": {
+        "id": [
+            2
+        ]
+    }
+}, {
+    "product_identifier": 16,
+    "title": "Linksys WRT 3200 ACM Router",
+    "details": "Placeat iure odit sequi enim eligendi. Soluta tempora est et modi accusamus pariatur voluptatum.",
+    "stock": 6,
+    "usability": "1",
+    "price": "12,000",
+    "situation": "Available",
+    "image": "https://cdn57.androidauthority.net/wp-content/uploads/2019/06/Flashrouters-picture-of-Linksys-3200-6.jpg",
+    "seller": 9,
+    "creationDate": "2020-01-07 11:12:10",
+    "lastChange": "2020-01-07 11:12:10",
+    "detetedDate": null,
+    "category": {
+        "id": [
+            2
+        ]
+    }
+}, {
+    "product_identifier": 17,
+    "title": "Anker Wireless Charger",
+    "details": "Placeat iure odit sequi enim eligendi. Soluta tempora est et modi accusamus pariatur voluptatum.",
+    "stock": 6,
+    "usability": "0",
+    "price": "2,000",
+    "situation": "Available",
+    "image": "https://gadgetedges.com/wp-content/uploads/2019/02/best-qi-wireless-chargers-for-samsung-galaxy-s10e.jpg",
+    "seller": 9,
+    "creationDate": "2020-01-07 11:12:10",
+    "lastChange": "2020-01-07 11:12:10",
+    "detetedDate": null,
+    "category": {
+        "id": [
+            2
+        ]
+    }
+}, {
+    "product_identifier": 18,
+    "title": "Anker Wireless Charger",
+    "details": "Placeat iure odit sequi enim eligendi. Soluta tempora est et modi accusamus pariatur voluptatum.",
+    "stock": 6,
+    "usability": "0",
+    "price": "2,000",
+    "situation": "Available",
+    "image": "https://gadgetedges.com/wp-content/uploads/2019/02/best-qi-wireless-chargers-for-samsung-galaxy-s10e.jpg",
+    "seller": 9,
+    "creationDate": "2020-01-08 11:12:10",
+    "lastChange": "2020-01-08 11:12:10",
+    "detetedDate": null,
+    "category": {
+        "id": [
+            3
+        ]
+    }
+}, {
+    "product_identifier": 19,
+    "title": "Anker Wireless Charger",
+    "details": "Placeat iure odit sequi enim eligendi. Soluta tempora est et modi accusamus pariatur voluptatum.",
+    "stock": 6,
+    "usability": "0",
+    "price": "2,000",
+    "situation": "Available",
+    "image": "https://gadgetedges.com/wp-content/uploads/2019/02/best-qi-wireless-chargers-for-samsung-galaxy-s10e.jpg",
+    "seller": 9,
+    "creationDate": "2020-01-09 11:12:10",
+    "lastChange": "2020-01-09 11:12:10",
+    "detetedDate": null,
+    "category": {
+        "id": [
+            3
+        ]
+    }
+}, {
+    "product_identifier": 20,
+    "title": "Anker Wireless Charger",
+    "details": "Placeat iure odit sequi enim eligendi. Soluta tempora est et modi accusamus pariatur voluptatum.",
+    "stock": 6,
+    "usability": "0",
+    "price": "2,000",
+    "situation": "Available",
+    "image": "https://gadgetedges.com/wp-content/uploads/2019/02/best-qi-wireless-chargers-for-samsung-galaxy-s10e.jpg",
+    "seller": 9,
+    "creationDate": "2020-01-10 11:12:10",
+    "lastChange": "2020-01-10 11:12:10",
+    "detetedDate": null,
+    "category": {
+        "id": [
+            3
+        ]
+    }
+}, {
+    "product_identifier": 21,
+    "title": "Dublino Fitted Sheet Natural",
+    "details": "Placeat iure odit sequi enim eligendi. Soluta tempora est et modi accusamus pariatur voluptatum.",
+    "stock": 6,
+    "usability": "0",
+    "price": "5,560",
+    "situation": "Available",
+    "image": "https://public.abodeliving.com/wp-content/uploads/2019/02/25141623/DUBLINO-NATURAL-BED-LINEN-1-0480-1920x1080.jpg",
+    "seller": 9,
+    "creationDate": "2020-01-10 11:12:10",
+    "lastChange": "2020-01-10 11:12:10",
+    "detetedDate": null,
+    "category": {
+        "id": [
+            4
+        ]
+    }
+}, {
+    "product_identifier": 22,
+    "title": "Door in door refrigerator",
+    "details": "Placeat iure odit sequi enim eligendi. Soluta tempora est et modi accusamus pariatur voluptatum.",
+    "stock": 6,
+    "usability": "2",
+    "price": "12,500",
+    "situation": "Available",
+    "image": "https://cnet3.cbsistatic.com/img/N2YgblswVBkvbjdHvW_-BLFuwXQ=/2017/11/22/def54e67-f7d6-4c05-adc8-fceb4abce54c/fl-ge-door-fridge0.jpg",
+    "seller": 9,
+    "creationDate": "2020-01-12 11:12:10",
+    "lastChange": "2020-01-12 11:12:10",
+    "detetedDate": null,
+    "category": {
+        "id": [
+            4
+        ]
+    }
+}, {
+    "product_identifier": 23,
+    "title": "LG OLED65R9 rollable OLED TV ",
+    "details": "Placeat iure odit sequi enim eligendi. Soluta tempora est et modi accusamus pariatur voluptatum.",
+    "stock": 6,
+    "usability": "0",
+    "price": "2,20,000",
+    "situation": "Available",
+    "image": "https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwiOiZG2-v_mAhWX9nMBHUN2C-EQjRx6BAgBEAQ&url=https%3A%2F%2Fwww.whathifi.com%2Fus%2Freviews%2Flg-oled65r9&psig=AOvVaw0JwqFgf6hyRMPNoTR63J1J&ust=1578983573160763",
+    "seller": 9,
+    "creationDate": "2020-01-12 11:12:10",
+    "lastChange": "2020-01-12 11:12:10",
+    "detetedDate": null,
+    "category": {
+        "id": [
+            4
+        ]
+    }
+}]

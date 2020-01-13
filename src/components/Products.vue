@@ -1,7 +1,7 @@
 <template>
   <div class="products container-fluid">
     <div class="title">
-      <h5>{{ type }} products</h5>
+      <h5>{{ type }}</h5>
       <a href="#">View more</a>
     </div>
     <div class="row">
@@ -29,12 +29,12 @@ export default {
     };
   },
   computed: {
-    ...mapGetters(["allProducts"]),
+    // ...mapGetters(["allProducts"]),
     ...mapGetters(["recentProducts"]),
     ...mapGetters(["electronicsProducts"])
   },
   methods: {
-    ...mapActions(["fetchProducts"]),
+    // ...mapActions(["fetchProducts"]),
     ...mapActions(["fetchRecentProducts"]),
     ...mapActions(["fetchElectronicsProducts"]),
     computedProducts() {
@@ -52,9 +52,10 @@ export default {
     }
     if (this.typeid == 1) {
       this.fetchElectronicsProducts();
-    } else {
-      this.fetchProducts();
     }
+    // else {
+    //   this.fetchProducts();
+    // }
   }
 };
 </script>

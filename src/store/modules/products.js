@@ -29,17 +29,17 @@ const actions = {
         commit
     }) {
         const response = await axios.get(state.endpoint);
-        commit('setElectronicsProducts', response.data.sort(() => .5 - Math.random()).filter(obj => {
+        commit('setElectronicsProducts', response.data.filter(obj => {
             if (obj.category.id == 1) {
                 return obj;
             }
-        }));
+        }).sort(() => 0.5 - Math.random()).slice(0, 4))
     },
 };
 const mutations = {
     setProducts: (state, products) => (state.products = products),
-    setRecentProducts: (state, products) => (state.recentProducts = products),
-    setElectronicsProducts: (state, products) => (state.electronicsProducts = products),
+    setRecentProducts: (state, products) => (state.recentProducts = products.sort(() => 0.5 - Math.random())),
+    setElectronicsProducts: (state, products) => (state.electronicsProducts = products)
 
 };
 

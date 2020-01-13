@@ -42,21 +42,19 @@ export default {
         return this.recentProducts;
       }
       if (this.typeid == 1) {
-        // this.allProducts.filter(obj => {
-        //   if (obj.category.id == this.typeid) {
-        //     return obj;
-        //   }
-        // });
         return this.electronicsProducts;
-      } else {
-        return this.allProducts;
       }
     }
   },
   beforeMount() {
-    this.fetchProducts();
-    this.fetchRecentProducts();
-    this.fetchElectronicsProducts();
+    if (this.typeid == 0) {
+      this.fetchRecentProducts();
+    }
+    if (this.typeid == 1) {
+      this.fetchElectronicsProducts();
+    } else {
+      this.fetchProducts();
+    }
   }
 };
 </script>

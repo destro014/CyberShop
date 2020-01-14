@@ -26,12 +26,10 @@ export default {
   name: "ProductCard",
   props: ["product"],
   data() {
-    return {
-      placeholder: null
-    };
+    return {};
   },
   beforeCreate() {
-    this.image = "logo-placeholder-large.png";
+    this.image = "/logo-placeholder-large.png";
   }
 };
 </script>

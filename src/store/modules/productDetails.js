@@ -28,15 +28,15 @@ const actions = {
     },
     async fetchSeller({
         commit
-    },sellerId) {
-        console.log(this.state.product.seller)
-        const response = await axios.get(`$(http://internshopapi.000webhostapp.com/api/users/${sellerId})`);
-        commit('setUser', response.data)
+    }, sellerId) {
+        const response = await axios.get(`http://internshopapi.000webhostapp.com/api/users/${sellerId}`);
+        commit('setSeller', response.data)
+
     }
 };
 const mutations = {
     setProduct: (state, product) => (state.product = product[0]),
-    setUser: (state, user) => (state.seller = user)
+    setSeller: (state, user) => (state.seller = user)
 
 };
 

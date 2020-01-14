@@ -21,13 +21,14 @@ import {
   faGift,
   faBuilding,
   faEnvelope,
+  faPhoneAlt,
   faLock,
   faUser,
   faTimesCircle,
   faCheckCircle,
   faEye,
   faEyeSlash,
-  faArrowCircleRight
+  faArrowCircleRight,
 } from "@fortawesome/free-solid-svg-icons";
 import {
   FontAwesomeIcon,
@@ -50,6 +51,7 @@ library.add(faSearch,
   faEnvelope,
   faLock,
   faUser,
+  faPhoneAlt,
   faTimesCircle,
   faCheckCircle,
   faEye,

@@ -26,7 +26,7 @@
 
           <li>Availablity: {{product.situation}}</li>
           <li>{{product.stock}} in stock</li>
-          <li>Sold by: {{product.seller}}</li>
+          <li v-if="seller">Sold by: {{seller.data.name}}</li>
         </ul>
         <button class="btn btn-outline-primary">Contact Seller</button>
       </div>
@@ -50,11 +50,9 @@ export default {
       id: this.$route.params.id,
       type1: "Similar products",
       typeid1: "0"
+      // image: "logo-placeholder-large.png"
       // product: null
     };
-  },
-  beforeCreate() {
-    this.image = "../../logo-placeholder-large.png";
   },
   computed: {
     ...mapGetters(["product"]),
@@ -62,12 +60,25 @@ export default {
   },
   methods: {
     ...mapActions(["fetchProduct"]),
-    ...mapActions(["fetchSeller"])
+    ...mapActions(["fetchSeller"]),
+    updateProduct() {
+      this.id = this.$route.params.id;
+      this.fetchProduct(this.id);
+      this.fetchSeller(this.product.seller);
+    }
+  },
+  beforeCreate() {
+    this.image = "/logo-placeholder-large.png";
   },
   beforeMount() {
     this.fetchProduct(this.id);
-    this.fetchSeller(this.product.seller);
-  }
+  },
+  updated() {
+    if (!this.seller) {
+      this.fetchSeller(this.product.seller);
+    }
+  },
+  watch: { $route: "updateProduct" }
 };
 </script>
 

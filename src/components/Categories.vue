@@ -11,9 +11,16 @@
           <CategoryCard :category="category" />
         </div>
         <div class="col-lg-2 col-md-3 col-sm-6 col-xs-6" v-if="type == 0">
-          <CategoryCard
-            :category="{title: 'View All', icon: 'arrow-circle-right', link: 'categories'}"
-          />
+          <div class="category-card">
+            <router-link :to="{name : 'categories'}">
+              <div class="card shadow--hover border-0">
+                <div class="icon">
+                  <font-awesome-icon :icon="['fas','arrow-circle-right' ]" />
+                </div>
+                <div class="category-name">View All</div>
+              </div>
+            </router-link>
+          </div>
         </div>
       </div>
     </div>
@@ -56,4 +63,5 @@ export default {
 
 <style lang="scss">
 @import "../styles/components/Categories.scss";
+@import "../styles/components/CategoryCard.scss";
 </style>

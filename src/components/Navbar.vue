@@ -53,7 +53,7 @@
               <router-link
                 v-for="category in allCategories"
                 :key="category.cat_identifier"
-                :to="{name: category.link}"
+                :to="{name : 'category', params: {name: category.title, id: category.id}}"
                 class="dropdown-item"
               >{{category.title}}</router-link>
             </div>

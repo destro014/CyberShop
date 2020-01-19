@@ -3,7 +3,7 @@
     <div class="categories-bar">
       <ul>
         <router-link
-          :to="{name: 'about'}"
+          :to="{name : 'category', params: {name: category.title, id: category.id}}"
           v-for="category in allCategories"
           :key="category.cat_identifiers"
         >

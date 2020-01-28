@@ -28,6 +28,7 @@ import {
   faCheckCircle,
   faEye,
   faEyeSlash,
+  faSpinner,
   faArrowCircleRight,
 } from "@fortawesome/free-solid-svg-icons";
 import {
@@ -56,6 +57,7 @@ library.add(faSearch,
   faCheckCircle,
   faEye,
   faEyeSlash,
+  faSpinner,
   faArrowCircleRight);
 Vue.component("font-awesome-icon", FontAwesomeIcon);
 Vue.component('font-awesome-layers', FontAwesomeLayers)

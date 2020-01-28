@@ -6,11 +6,13 @@ const state = {
     products: null,
     recentProducts: null,
     electronicsProducts: null,
+    electronicsAccessories: null,
 };
 const getters = {
     allProducts: state => state.products,
     recentProducts: state => state.recentProducts,
-    electronicsProducts: state => state.electronicsProducts
+    electronicsProducts: state => state.electronicsProducts,
+    electronicsAccessories: state => state.electronicsAccessories
 };
 const actions = {
     async fetchProducts({
@@ -35,11 +37,22 @@ const actions = {
             }
         }).sort(() => 0.5 - Math.random()).slice(0, 4))
     },
+    async fetchElectronicsAccessories({
+        commit
+    }) {
+        const response = await axios.get(state.endpoint);
+        commit('setElectronicsAccessories', response.data.filter(obj => {
+            if (obj.category.id == 2) {
+                return obj;
+            }
+        }).sort(() => 0.5 - Math.random()).slice(0, 4))
+    },
 };
 const mutations = {
     setProducts: (state, products) => (state.products = products),
     setRecentProducts: (state, products) => (state.recentProducts = products.sort(() => 0.5 - Math.random())),
-    setElectronicsProducts: (state, products) => (state.electronicsProducts = products)
+    setElectronicsProducts: (state, products) => (state.electronicsProducts = products),
+    setElectronicsAccessories: (state, products) => (state.electronicsAccessories = products)
 
 };
 

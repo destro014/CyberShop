@@ -8,7 +8,7 @@
               <div class="text-center text-muted mb-4">
                 <h1>Register</h1>
               </div>
-              <form>
+              <form @submit="registerUser">
                 <div
                   class="form-group mb-3"
                   :class="{'has-success' : validName, 'has-danger':nameTyping && !validName, 'focused' : nameFocus}"
@@ -50,6 +50,28 @@
                       @focus="onEmailFocus"
                       @blur="onEmailBlur"
                       :class="{'is-valid' :validEmail,'is-invalid':emailTyping && !validEmail}"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="form-group mb-3"
+                  :class="{'has-success' : validNumber, 'has-danger':numberTyping && !validNumber, 'focused' : numberFocus}"
+                >
+                  <div class="input-group input-group-alternative">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text">
+                        <font-awesome-icon :icon="['fas', 'phone-alt']" />
+                      </span>
+                    </div>
+                    <input
+                      class="form-control"
+                      placeholder="Phone Number"
+                      type="number"
+                      v-model="number"
+                      @input="checkNumber"
+                      @focus="onNumberFocus"
+                      @blur="onNumberBlur"
+                      :class="{'is-valid' :validNumber,'is-invalid':numberTyping && !validNumber}"
                     />
                   </div>
                 </div>
@@ -110,10 +132,15 @@
                 </div>
                 <div class="text-center">
                   <button
-                    type="button"
+                    type="submit"
                     class="btn btn-primary my-4"
-                    :class="{'disabled' : !formFilled}"
-                  >Register</button>
+                    :class="{'disabled' : !formFilled || registering}"
+                  >
+                    <span v-if="registering">
+                      <font-awesome-icon :icon="['fas', 'spinner']" pulse />
+                    </span>
+                    <span v-else>Register</span>
+                  </button>
                 </div>
               </form>
             </div>
@@ -137,34 +164,45 @@
 </template>
 
 <script>
+import { mapActions, mapGetters } from "vuex";
+import axios from "axios";
 export default {
   name: "Regsiter",
   data() {
     return {
       name: null,
       email: null,
+      number: null,
       password: null,
       reg: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,24}))$/,
       nameTyping: false,
-      passwordTyping: false,
       emailTyping: false,
+      numberTyping: false,
+      passwordTyping: false,
       nameFocus: false,
       emailFocus: false,
+      numberFocus: false,
       passwordFocus: false,
       nameLength: 0,
       passwordLength: 0,
+      numberLength: 0,
       containsEightCharacters: false,
       containsUppercase: false,
       containsSpecialCharacter: false,
       validEmail: null,
       validName: null,
+      validNumber: null,
       validPassword: false,
       formFilled: false,
       viewingPassword: false,
-      passwordType: "password"
+      passwordType: "password",
+      formData: null,
+      registering: false
     };
   },
   methods: {
+    ...mapActions(["register"]),
+
     onNameFocus() {
       this.nameTyping = true;
       this.nameFocus = true;
@@ -172,6 +210,10 @@ export default {
     onEmailFocus() {
       this.emailTyping = true;
       this.emailFocus = true;
+    },
+    onNumberFocus() {
+      this.numberTyping = true;
+      this.numberFocus = true;
     },
     onPasswordFocus() {
       this.passwordTyping = true;
@@ -184,6 +226,10 @@ export default {
     onEmailBlur() {
       this.emailTyping = false;
       this.emailFocus = false;
+    },
+    onNumberBlur() {
+      this.numberTyping = false;
+      this.numberFocus = false;
     },
     onPasswordBlur() {
       // this.passwordTyping = false;
@@ -201,6 +247,13 @@ export default {
     checkEmail() {
       this.validEmail = this.reg.test(this.email);
       this.validForm();
+    },
+    checkNumber() {
+      this.numberLength = this.number.length;
+      if (this.numberLength > 9) {
+        this.validNumber = true;
+        this.validForm();
+      }
     },
     viewPassword() {
       this.viewingPassword = !this.viewingPassword;
@@ -246,6 +299,19 @@ export default {
         this.formFilled = false;
         return this.formFilled;
       }
+    },
+    //this method is called when registration form is submitted.
+    registerUser(e) {
+      e.preventDefault();
+      // this.registering = true;
+      var userData = new FormData();
+      userData.append("name", this.name);
+      userData.append("email", this.email);
+      userData.append("phone", this.number);
+      userData.append("password", this.password);
+      // this is the action from store which take neformData wUser details as parameters
+      // this.userData = [this.name, this.email, this.phone, this.password];
+      this.register(userData);
     }
   }
 };
@@ -287,6 +353,17 @@ export default {
   .disabled {
     pointer-events: none;
     cursor: disabled !important;
+  }
+  /* Chrome, Safari, Edge, Opera */
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  /* Firefox */
+  input[type="number"] {
+    -moz-appearance: textfield;
   }
 }
 </style>

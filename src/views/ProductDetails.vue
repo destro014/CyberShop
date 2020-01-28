@@ -32,7 +32,7 @@
       </div>
     </div>
     <hr />
-    <products :type="type1" :typeid="typeid1" />
+    <products :type="type1" :typeId="product.category.id[0]" :typeLength="0" />
   </div>
 </template>
 
@@ -49,7 +49,7 @@ export default {
       name: this.$route.params.name,
       id: this.$route.params.id,
       type1: "Similar products",
-      typeid1: "0"
+      // typeid1: "0"
       // image: "logo-placeholder-large.png"
       // product: null
     };

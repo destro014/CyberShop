@@ -1,9 +1,9 @@
 <template>
   <div class="home shifted">
     <hero />
-    <Products :type="type1" :typeid="typeid1" />
+    <Products :type="'Recent Products'" :typeId="typeid0" :typeLength="4" />
     <Categories :type="categoryType" />
-    <Products :type="type2" :typeid="typeid2" />
+    <Products :type="'Electronic devices'" :typeId="typeid1" :typeLength="typeLength1" />
   </div>
 </template>
 
@@ -22,11 +22,12 @@ export default {
   },
   data() {
     return {
-      type1: "Recently listed products",
-      typeid1: 0,
-      categoryType: 0,
-      type2: "Electronics devices",
-      typeid2: 1
+      type0: "Recently listed products",
+      typeid0: 0,
+      type1: "Electronics devices",
+      typeid1: 1,
+      typeLength1: 4,
+      categoryType: 0
     };
   }
 };

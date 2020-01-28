@@ -1,8 +1,11 @@
 <template>
   <div class="products container-fluid">
     <div class="title">
-      <h5>{{ type }}</h5>
-      <a href="#">View more</a>
+      <h5>{{ type}}</h5>
+      <router-link
+        :to="{name : 'category', params: {name: type, id: typeId}}"
+        v-if="typeLength==4 "
+      >View more</router-link>
     </div>
     <div class="row">
       <div
@@ -22,37 +25,42 @@ import ProductCard from "@/components/ProductCard.vue";
 export default {
   name: "Products",
   components: { ProductCard },
-  props: ["type", "typeid"],
+  props: ["type", "typeId", "typeLength"],
   data() {
-    return {
-      // products: null
-    };
+    return {};
   },
   computed: {
     // ...mapGetters(["allProducts"]),
     ...mapGetters(["recentProducts"]),
-    ...mapGetters(["electronicsProducts"])
+    ...mapGetters(["electronicsProducts"]),
+    ...mapGetters(["electronicsAccessories"])
   },
   methods: {
     // ...mapActions(["fetchProducts"]),
     ...mapActions(["fetchRecentProducts"]),
     ...mapActions(["fetchElectronicsProducts"]),
+    ...mapActions(["fetchElectronicsAccessories"]),
     computedProducts() {
-      if (this.typeid == 0) {
+      if (this.typeId == 0) {
         return this.recentProducts;
       }
-      if (this.typeid == 1) {
-        return this.electronicsProducts;
+      if (this.typeId == 1) {
+        if (this.typeLength == 4 || this.typeLength == 0) {
+          return this.electronicsProducts;
+        } else {
+          return this.electronicsProducts;
+        }
+      }
+      if (this.typeId == 2) {
+        return this.electronicsAccessories;
       }
     }
   },
   beforeMount() {
-    if (this.typeid == 0) {
-      this.fetchRecentProducts();
-    }
-    if (this.typeid == 1) {
-      this.fetchElectronicsProducts();
-    }
+    this.fetchRecentProducts();
+    this.fetchElectronicsProducts();
+    this.fetchElectronicsAccessories();
+
     // else {
     //   this.fetchProducts();
     // }
